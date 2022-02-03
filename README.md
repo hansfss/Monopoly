@@ -1,3 +1,2 @@
-# MonopolyBoardGame
 # maw-naw-puh-lee
-# Monopoly
+Coded in C# and created in Visual Studio
