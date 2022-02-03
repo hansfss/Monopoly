@@ -1,0 +1,44 @@
+﻿<Window x:Class="Monopoly_Nasdaq_Alpha_v0._01.PressStart"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monopoly_Nasdaq_Alpha_v0._01"
+        mc:Ignorable="d"
+        WindowStyle="None" Background="SlateGray" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="PressStart" Height="450" Width="800">
+    <Grid Background="Black">
+        <Image x:Name="monopolylogo" Margin="0,10,0,164" Source="Board/Logo.png" Stretch="Fill" PreviewMouseDown="Image_PreviewMouseDown"/>
+        <Label x:Name="lblVersion" Content="¡Bolsa de Comercio!" HorizontalAlignment="Left" Margin="355,218,0,0" Width="445" Foreground="White" Cursor="No" FontSize="20" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.432"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="lblNewGame" Content="" HorizontalAlignment="Left" Margin="193,291,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Cursor="Hand" PreviewMouseDown="lblNewGame_PreviewMouseDown"/>
+        <Label x:Name="lblExit" Content="" HorizontalAlignment="Left" Margin="193,380,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" PreviewMouseDown="lblExit_PreviewMouseDown_1" Cursor="Hand"/>
+        <Label x:Name="lblConfiguration" Content="" HorizontalAlignment="Left" Margin="193,333,0,0" VerticalAlignment="Top" Foreground="White" FontSize="24" Cursor="Hand" PreviewMouseDown="lblConfiguration_PreviewMouseDown"/>
+        <Label x:Name="lblPressStart" Content="press start" HorizontalAlignment="Left" Margin="145,312,0,0" VerticalAlignment="Top" FontFamily="OCR A Extended" FontSize="72" Foreground="White" Cursor="Hand" Loaded="Window_Loaded" PreviewMouseDown="lblPressStart_PreviewMouseDown"/>
+        <Rectangle x:Name="config" Margin="0,229,0,0" Stretch="Fill" Width="800" />
+        <Label Content="Label" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+        <Label x:Name="lblconfig_back" Content="Back" HorizontalAlignment="Left" Margin="1029,395,-323,0" VerticalAlignment="Top" Width="94" Cursor="Hand" FontSize="20" Foreground="White" PreviewMouseDown="lblconfig_back_PreviewMouseDown"/>
+        <Image x:Name="imgInstructivo2" Margin="469,692,250,-320" Source="Board/Chance.png" Stretch="Fill"/>
+        <Image x:Name="imgInstructivo1" Margin="469,573,239,-197" Source="Board/Nasdaq100.png" Stretch="Fill"/>
+        <Image x:Name="imgInstructivo3" Margin="100,692,609,-325" Source="Board/GoToJail.png" Stretch="Fill"/>
+        <Image x:Name="imgInstructivo4" Margin="100,573,609,-210" Source="Board/Jail.png" Stretch="Fill"/>
+        <Label x:Name="lblInstructivo2" Content="Go to jail: intenta no caer acá&#xA;apenas lo hagas irás directamente&#xA;a la cárcel" HorizontalAlignment="Left" Margin="207,692,0,-308" VerticalAlignment="Top" Foreground="Black" FontSize="14" IsEnabled="False"/>
+        <Label x:Name="lblInstructivo1" Content="Si te envían a la cárcel &#xD;&#xA;(sea cual sea la razón) &#xA; tienes que esperar 3 turnos &#xA;para salir o esperar&#xA;la suerte de un dado doble&#xA;" HorizontalAlignment="Left" Margin="207,553,0,-218" Foreground="Black" FontSize="14" IsEnabled="False" Height="115" VerticalAlignment="Top"/>
+        <Label x:Name="lblInstructivo3" Content="Tarjetas de &#xD;&#xA;casualidad" HorizontalAlignment="Left" Margin="566,711,0,-308" VerticalAlignment="Top" Foreground="black" FontSize="14" IsEnabled="False" Width="97"/>
+        <Label x:Name="lblInstructivo4" Content="Tarjetas de &#xA;Nasdaq - 100" HorizontalAlignment="Left" Margin="566,573,0,-170" VerticalAlignment="Top" Foreground="Black" FontSize="14" IsEnabled="False" Width="97"/>
+        <Label x:Name="lblconfig_next" Content="Next" HorizontalAlignment="Left" Margin="1029,454,-323,-41" VerticalAlignment="Top" Width="94" Cursor="Hand" FontSize="20" Foreground="White" PreviewMouseDown="lblconfig_next_PreviewMouseDown" />
+        <Label x:Name="lblconfig_previous" Content="Previous" HorizontalAlignment="Left" Margin="1029,506,-323,-93" VerticalAlignment="Top" Width="94" Cursor="Hand" FontSize="20" Foreground="White" PreviewMouseDown="lblconfig_previous_PreviewMouseDown" />
+        <Label x:Name="lblInstructivo5" Content="Lanza los dados y avanza por las casillas. &#xA;Intenta comprar todas las empresas y se &#xA;el mayor accionista de todos para ganar!&#xD;&#xA;&#xA;Modo rápido: puedes usar la barra &#xA;espaciadora para lanzar los dados, moverte&#xA;y tomar las cartas." HorizontalAlignment="Left" Margin="748,573,-241,-284" VerticalAlignment="Top" Foreground="Black" FontSize="14" IsEnabled="False" Width="293" Height="161"/>
+        <Image x:Name="ImageEasterEgg" Margin="-1129,-151,1243,450" Source="Board/Logo2.png" Stretch="Fill"/>
+        <Image x:Name="imgInstructivo5" Margin="654,608,68,-218" Source="Board/dice.png" Stretch="Fill"/>
+      
+    </Grid>
+</Window>

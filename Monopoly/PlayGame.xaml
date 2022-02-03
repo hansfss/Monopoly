@@ -1,0 +1,193 @@
+﻿<Window x:Class="Monopoly_Nasdaq_Alpha_v0._01.PlayGame"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Monopoly_Nasdaq_Alpha_v0._01"
+        mc:Ignorable="d" Background="SlateGray" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
+        Title="PlayGame" Height="450" Width="800" WindowStyle="None">
+    <Grid>
+        <Grid.Background>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0.391"/>
+                <GradientStop Color="#FF343434" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Image Margin="138,38,190,0" Source="Board/Board.jpg" Stretch="Fill"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="33,34,0,0" VerticalAlignment="Top" Width="75" PreviewMouseDown="btnBack_PreviewMouseDown" Height="20"/>
+        <TextBlock x:Name="txtMapData" HorizontalAlignment="Left" Foreground="Azure" Margin="615,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="180" Background="#FF353535"/>
+        <Button x:Name="btnNextTurn" Content="" HorizontalAlignment="Left" Margin="715,39,0,0" VerticalAlignment="Top" Width="75" Click="btnNextTurn_Click" IsEnabled="False"/>
+        <Button x:Name="btnStart" Content="Start!" HorizontalAlignment="Left" Margin="615,39,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
+        <TextBlock x:Name="txtDice1" HorizontalAlignment="Left" Foreground="Azure" Margin="680,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="22" Background="#FF353535" FontSize="18" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center"/>
+        <Button x:Name="btnComprar" Content="Comprar" HorizontalAlignment="Left" Margin="715,63,0,0" VerticalAlignment="Top" Width="75" Click="btnComprar_Click" Height="20"/>
+        <TextBlock x:Name="txtDice2" HorizontalAlignment="Left" Foreground="Azure" Margin="715,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="22" Background="#FF353535" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center" FontSize="18"/>
+        <Image Margin="552,298,202,130" Source="Brands/HM.png" Stretch="Fill"/>
+        <Image Margin="560,325,208,96" Source="Board/Taxes.png" Stretch="Fill"/>
+        <Label x:Name="lbltaxsoymuyinutil" Content="300$" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="552,303,0,0" RenderTransformOrigin="0.5,0.5" Height="70" Width="38">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90.754"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+
+        <Image Margin="559,198,208,223" Source="Brands/amex.png" Stretch="Fill"/>
+        <Image Margin="550,139,200,291" Source="Brands/visa.png" Stretch="Fill"/>
+        <Image Margin="550,99,200,314" Source="Brands/MasterCard.png" Stretch="Fill" RenderTransformOrigin="0.305,0.138"/>
+        <Image Margin="502,52,262,364" Source="Brands/McDonalds.png" Stretch="Fill"/>
+        <Image Margin="429,54,336,364" Source="Brands/BurgerKing.png" Stretch="Fill"/>
+        <Image Margin="159,102,612,319" Source="Brands/Starbucks.png" Stretch="Fill"/>
+        <Image Margin="143,128,599,282" Source="Brands/cocacola.png" Stretch="Fill"/>
+        <Image Margin="166,325,600,97" Source="Board/BolsaDeComercio.png" Stretch="Fill"/>
+        <Image Margin="551,166,214,254" Source="Board/BolsaDeComercio.png" Stretch="Fill"/>
+        <Image Margin="157,197,605,221" Source="Brands/pepsi.png" Stretch="Fill"/>
+        <Image Margin="157,260,609,160" Source="Brands/google.png" Stretch="Fill"/>
+        <Image Margin="161,358,612,65" Source="Brands/facebook.png" Stretch="Fill"/>
+        <Image Margin="506,403,214,11" Source="Brands/CHILE.png" Stretch="Fill"/>
+        <Image Margin="422,396,332,10" Source="Brands/santander.png" Stretch="Fill"/>
+        <Image Margin="556,430,202,-23" Source="Board/Go.png" Stretch="Fill" RenderTransformOrigin="0.519,0.489">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-179.866"/>
+                    <TranslateTransform X="-12.309" Y="-37.508"/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="211,404,551,13" Source="Brands/Adidas.png" Stretch="Fill"/>
+        <Image Margin="321,410,444,18" Source="Brands/Nike.jpg" Stretch="Fill"/>
+        <Image Margin="242,405,512,13" Source="Brands/LV.png" Stretch="Fill"/>
+        <Image Margin="212,52,555,364" Source="Brands/vw.png" Stretch="Fill"/>
+        <Image Margin="287,49,484,363" Source="Brands/Ferrari.png" Stretch="Fill" RenderTransformOrigin="0.583,0.27"/>
+        <Image Margin="323,49,445,364" Source="Brands/porsche.png" Stretch="Fill"/>
+        <Image Margin="552,359,202,63" Source="Brands/TH.png" Stretch="Fill"/>
+        <Image Margin="166,295,612,130" Source="Brands/PP.png" Stretch="Fill"/>
+        <Image Margin="391,49,373,366" Source="Brands/CarlJR.png" Stretch="Fill"/>
+        <Image Margin="166,388,591,25" Source="Board/Jail.png" Stretch="Fill"/>
+        <Image Margin="541,49,204,351" Source="Board/GoToJail.png" Stretch="Fill"/>
+        <Image Margin="391,398,373,18" Source="Board/FastTravel.png" Stretch="Fill"/>
+        <Image Margin="150,49,593,351" Source="Board/Chair.png" Stretch="Fill"/>
+        <Image Margin="465,56,299,360" Source="Board/FastTravel.png" Stretch="Fill"/>
+        <Image Margin="553,230,218,192" Source="Board/FastTravel.png" Stretch="Fill"/>
+        <Image Margin="248,54,518,360" Source="Board/chance.png" Stretch="Fill"/>
+        <Image Margin="285,396,481,18" Source="Board/chance.png" Stretch="Fill"/>
+        <Image Margin="552,260,218,160" Source="Board/chance.png" Stretch="Fill"/>
+        <Image Margin="465,388,299,10" Source="Board/Nasdaq100.png" Stretch="Fill"/>
+        <Image Margin="358,388,409,10" Source="Board/Nasdaq100.png" Stretch="Fill"/>
+        <Image Margin="358,56,410,364" Source="Board/chance.png" Stretch="Fill" RenderTransformOrigin="0.5,0.544"/>
+        <Image Margin="165,151,605,239" Source="Board/Nasdaq100.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="90.869"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Margin="165,214,605,176" Source="Board/Nasdaq100.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="88.853"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="imgplayer2" Margin="-97,260,849,149" Source="Characters/Player4.png" Stretch="Fill"/>
+        <Image x:Name="imgplayer3" Margin="-150,261,902,147" Source="Characters/Player3.png" Stretch="Fill"/>
+        <Image x:Name="imgplayer4" Margin="-203,261,955,147" Source="Characters/Player2.png" Stretch="Fill" RenderTransformOrigin="0.939,3.5"/>
+        <Image x:Name="imgplayer1" Margin="-256,260,1008,148" Source="Characters/Player1.png" Stretch="Fill" RenderTransformOrigin="0.485,0.546"/>
+        <Grid HorizontalAlignment="Left" Height="82" Margin="5,68,0,0" VerticalAlignment="Top" Width="133" ShowGridLines="True" Background="#FF353535">
+            <TextBlock x:Name="txtDataPlayer1" HorizontalAlignment="Left" Margin="6,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="120" Background="#FFEAEAEA"/>
+            <Label x:Name="lblPlayer1" Content="PLAYER 1" HorizontalAlignment="Left" Margin="34,-1,0,0" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox x:Name="cboPropiedades1" HorizontalAlignment="Left" Margin="6,55,0,0" VerticalAlignment="Top" Width="120"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="82" Margin="5,156,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
+            <TextBlock x:Name="txtDataPlayer2" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="113" Background="#FFEAEAEA"/>
+            <Label x:Name="lblPlayer2" Content="PLAYER 2" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox x:Name="cboPropiedades2" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="113"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="82" Margin="5,243,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
+            <TextBlock x:Name="txtDataPlayer3" HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="110" Background="#FFEAEAEA"/>
+            <Label x:Name="lblPlayer3" Content="PLAYER 3" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" Foreground="White"/>
+            <ComboBox x:Name="cboPropiedades3" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="110"/>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Height="82" Margin="5,330,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
+            <TextBlock x:Name="txtDataPlayer4" HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="110" Background="#FFEAEAEA"/>
+            <Label x:Name="lblPlayer4" Content="PLAYER 4" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.154" Foreground="White"/>
+            <ComboBox x:Name="cboPropiedades4" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="110"/>
+        </Grid>
+        <Label x:Name="label" Content="TURNO" Foreground ="White" HorizontalAlignment="Left" Margin="652,241,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTurno" HorizontalAlignment="Left" Foreground="Azure" Height="23" Margin="702,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Background="#FF353535" HorizontalContentAlignment="Center"/>
+        <TextBlock x:Name="txtDice3" HorizontalAlignment="Left" Foreground="Azure" Margin="680,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="57" Background="#FF353535" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center" FontSize="36"/>
+        <Image x:Name="Facep4" Margin="1018,196,-418,54" Source="Characters/player2_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep3" Margin="1018,198,-418,54" Source="Characters/player3_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep2" Margin="1018,196,-418,54" Source="Characters/player4_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep1" Margin="1018,196,-418,54" Source="Characters/player1_b.png" Stretch="Fill"/>
+        <Grid x:Name="GridTrade" HorizontalAlignment="Left" Height="402" Margin="613,38,0,0" VerticalAlignment="Top" Width="182" Background="#FF353535">
+            <Label x:Name="lblJugador" Content="Elige un jugador" HorizontalAlignment="Left" Foreground="Azure" Margin="22,0,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Center"/>
+            <ComboBox x:Name="cboJugadores" HorizontalAlignment="Left" Margin="29,26,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboJugadores_SelectionChanged"/>
+            <Label x:Name="label_Copy" Content="Propiedad a ofrecer" HorizontalAlignment="Left" Foreground="Azure" Margin="12,42,0,0" VerticalAlignment="Top" Width="158" HorizontalContentAlignment="Center"/>
+            <ComboBox x:Name="cboPropiedadO" HorizontalAlignment="Left" Margin="29,68,0,0" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label_Copy1" Content="Oferta" HorizontalAlignment="Left" Foreground="Azure" Margin="12,135,0,0" VerticalAlignment="Top" Width="145" HorizontalContentAlignment="Center"/>
+            <TextBox x:Name="txtOferta" HorizontalAlignment="Left" Height="23" Margin="29,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+            <Label x:Name="label_Copy2" Content="Cual propiedad quieres?" HorizontalAlignment="Left" Foreground="Azure" Margin="12,90,0,0" VerticalAlignment="Top" Width="158" HorizontalContentAlignment="Center"/>
+            <ComboBox x:Name="cboPropiedadQ" HorizontalAlignment="Left" Margin="29,116,0,0" VerticalAlignment="Top" Width="120"/>
+            <RadioButton x:Name="rbSi" Content="Si" Foreground="Azure" HorizontalAlignment="Left" Margin="69,333,0,0" VerticalAlignment="Top" Checked="rbSi_Checked"/>
+            <RadioButton x:Name="rbNo" Content="No" HorizontalAlignment="Left" Foreground="Azure" Margin="69,354,0,0" VerticalAlignment="Top" Checked="rbNo_Checked"/>
+            <Label x:Name="lblAR" Content="Label" HorizontalAlignment="Left" Foreground="Azure" Margin="10,304,0,0" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center"/>
+            <Label x:Name="label2" Content="Hacer oferta" HorizontalAlignment="Left" Foreground="Azure" Margin="40,256,0,0" VerticalAlignment="Top"/>
+            <RadioButton x:Name="rbOferta" Content="" HorizontalAlignment="Left" Margin="115,262,0,0" VerticalAlignment="Top" Checked="rbOferta_Checked"/>
+            <Button x:Name="btnTradeCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" Width="75" Click="btnTradeCancelar_Click"/>
+        </Grid>
+        <Button x:Name="btnTrade" Content="Trade" HorizontalAlignment="Left" Margin="615,65,0,0" VerticalAlignment="Top" Width="75" Click="btnTrade_Click_1"/>
+        <Grid x:Name="gridPrestamo" HorizontalAlignment="Left" Height="207" Margin="615,243,0,-0.4" VerticalAlignment="Top" Width="180" Background="#FF383838">
+            <Label x:Name="label_Copy3" Content="Elige la marca" HorizontalAlignment="Left" Foreground="Azure" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center"/>
+            <ComboBox x:Name="cboPrestamo" HorizontalAlignment="Left" Margin="28,36,0,0" VerticalAlignment="Top" Width="120"/>
+            <RadioButton x:Name="rbHacerPrestamo" Content="Pedir prestamo" Foreground="Azure" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top" Checked="rbHacerPrestamo_Checked"/>
+            <RadioButton x:Name="rbCancelarPrestamo" Content="Cancelar prestamo" Foreground="Azure" HorizontalAlignment="Left" Margin="32,115,0,0" VerticalAlignment="Top" Checked="rbCancelarPrestamo_Checked"/>
+            <Grid HorizontalAlignment="Left" Height="100" Margin="166,70,-86,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+        <Button x:Name="btnPrestamos" Content="Prestamos" HorizontalAlignment="Left" Margin="33,422,0,0" VerticalAlignment="Top" Width="75" Click="btnPrestamos_Click"/>
+        <Label x:Name="lbltaxsoymuyinutil_Copy" Content=" The Chair&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="150,48,0,0" RenderTransformOrigin="0.5,0.5" Height="52" Width="59" FontSize="10">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-360.583"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Button x:Name="btnMute" Content="" HorizontalAlignment="Left" Margin="57,9,0,0" VerticalAlignment="Top" Width="27" Height="20" Click="btnMute_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Board/notsilencedbutton.jpg"/>
+            </Button.Background>
+        </Button>
+        <Button x:Name="btnSound" Content="" HorizontalAlignment="Left" Margin="57,-30,0,0" VerticalAlignment="Top" Width="27" Height="20" Click="btnSound_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="Board/silencedbutton.jpg"/>
+            </Button.Background>
+        </Button>
+
+
+
+
+
+
+
+
+
+
+    </Grid>
+</Window>

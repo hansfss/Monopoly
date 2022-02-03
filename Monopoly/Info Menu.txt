@@ -1,0 +1,9 @@
+Instructivo2 450,255,269,117
+Instructivo1 439,358,269,18
+Instructivo3 134,245,575,122
+Instructivo4 134,348,575,15
+
+txti1 225,255,0,0
+txti2 225,335,0,0
+txti3 536,266,0,0
+txti4 531,360,0,0

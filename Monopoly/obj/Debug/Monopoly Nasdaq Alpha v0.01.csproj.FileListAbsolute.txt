@@ -1,0 +1,355 @@
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\App.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\MainWindow.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\MainWindow.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\PressStart.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\PressStart.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\NewGame1.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\NewGame1.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\PlayGame.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Alpha v0.01\obj\Debug\PlayGame.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\MiloZord\Documents\Trabajos\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojResolveAssemblyReference.cache
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\folke\Desktop\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly\Monopoly Nasdaq Actualizado\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojResolveAssemblyReference.cache
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Downloads\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojResolveAssemblyReference.cache
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.g.cs
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.g.cs
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.g.cs
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.g.cs
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\App.g.cs
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\MainWindow.baml
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\NewGame1.baml
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PlayGame.baml
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\PressStart.baml
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\folke\Desktop\Stuff\C#\Monopoly Bolsa de comercio 16-9 (3)\Monopoly Bolsa de comercio 16-9\Monopoly Nasdaq Pandemia v0.000001\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\App.g.cs
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.baml
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Dano\Downloads\Monopoly Nasdaq Pandemia v0.000001\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\App.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\App.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\MainWindow.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\NewGame1.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PlayGame.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\PressStart.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio v.09 cata\Monopoly Bolsa de comercio v.09\Monopoly Bolsa de comercio v.09\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\MainWindow.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\NewGame1.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\PlayGame.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\PressStart.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\App.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\MainWindow.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\NewGame1.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\PlayGame.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\PressStart.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Creditos.g.cs
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Creditos.baml
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\Dano\Downloads\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojAssemblyReference.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\App.g.cs
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.baml
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\Catita\Desktop\UMAYOR\5to año\Primer semestre\Taller de progra\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojResolveAssemblyReference.cache
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\App.g.cs
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.baml
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\folke\Desktop\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.application
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.application
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csprojResolveAssemblyReference.cache
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\App.g.cs
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Creditos.baml
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\MainWindow.baml
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\NewGame1.baml
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PlayGame.baml
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\PressStart.baml
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.application
