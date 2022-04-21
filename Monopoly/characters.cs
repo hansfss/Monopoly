@@ -14,6 +14,8 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
         List<holdings> Propiedades = new List<holdings>();
         bool InJail;
         int Position;
+        int turnsInJail;
+        List<int> escapeJailCards = new List<int>();
         string Image;
 
         public characters()
@@ -23,9 +25,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             this.Propiedades = new List<holdings>();
             this.InJail = false;
             this.Position = 0;
+            //this.turnsInJail = 0;
+            //this.escapeJailCards = new List<int>();
             this.Image = "";
         }
-
         public characters(int id)
         {
             ID = id;
@@ -46,7 +49,6 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             Position = position;
             InJail = inJail;
         }
-
         public characters(double money, int iD, List<holdings> propiedades, bool inJail, int position)
         {
             Money = money;
@@ -56,7 +58,6 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             InJail = inJail;
 
         }
-
         public characters(double money, int iD, bool inJail, int position, string i)
         {
             Money = money;
@@ -89,9 +90,9 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             bool bancarrota = false;
             int contador = 0;
 
-            if(Money == 0)
+            if (Money == 0)
             {
-                if(Propiedades.Count == 0)
+                if (Propiedades.Count == 0)
                 {
                     bancarrota = true;
                 }
@@ -99,13 +100,13 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 {
                     for (int i = 0; i < Propiedades.Count; i++)
                     {
-                        if(Propiedades[i].getPrestamo() == true)
+                        if (Propiedades[i].getPrestamo() == true)
                         {
                             contador++;
                         }
                     }
 
-                    if(Propiedades.Count == contador)
+                    if (Propiedades.Count == contador)
                     {
                         bancarrota = true;
                     }
@@ -128,7 +129,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             return true;
         }
 
-        public bool buy(double precio,holdings a)
+        public bool buy(double precio, holdings a)
         {
             Money = Money - precio;
             Propiedades.Add(a);
@@ -142,12 +143,19 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 Propiedades.Remove(a);
                 Money = Money + precio;
                 return true;
-            } 
+            }
             else
             {
                 return false;
             }
         }
+
+        public bool turnosEncarcelado()
+        {
+            turnsInJail++;
+            return true;
+        }
+
         public bool jailed()
         {
             InJail = true;
@@ -160,42 +168,60 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             return true;
         }
 
-        public void SetMoney(double i) 
+        public int GetID()
         {
-            Money = i;
-        }
-        public void SetPosition(int i) 
-        {
-            Position = i;
+            return ID;
         }
         public void SetID(int i)
         {
             ID = i;
         }
-        public int GetID()
+
+        public int getTurnsJail()
         {
-            return ID;
+            return turnsInJail;
         }
-        public List<holdings> GetHoldings()
+        public void SetTurnsJail(int i)
         {
-            return Propiedades;
+            turnsInJail = i;
         }
+
         public double GetMoney()
         {
             return Money;
         }
+        public void SetMoney(double i)
+        {
+            Money = i;
+        }
+
         public int GetPosition()
         {
             return Position;
+        }
+        public void SetPosition(int i)
+        {
+            Position = i;
+        }
+
+        public bool getJail()
+        {
+            return InJail;
         }
         public void setJail(bool i)
         {
             InJail = i;
         }
-        public bool getJail()
+
+        public List<int> getTarjetas()
         {
-            return InJail;
+            return escapeJailCards;
         }
+        public void setTarjetas(int i)
+        {
+            escapeJailCards.Add(i);
+        }
+
         public List<holdings> getHoldings()
         {
             return Propiedades;

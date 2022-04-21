@@ -25,32 +25,28 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
         int rc { get; set; }
         //setea turno en 0 cuando inicia 
         int Turnoactual = 0;
+        //crea el turno, es un queue
         Queue<int> Turn = new Queue<int>();
-        //crea el turno, es un queque
-        int playernumber;
         //le entra el numero de jugadores
+        int playernumber;
+        //crea la lista de casillas y la de personajes
         List<holdings> Spaces = new List<holdings>();
         List<characters> players = new List<characters>();
-       //crea la lista de casillas y la de personajes
-        Dice dice = new Dice();
         //crea el dado
+        Dice dice = new Dice();
+        //characters
         characters player1 = new characters(1);
         characters player2 = new characters(2);
         characters player3 = new characters(3);
         characters player4 = new characters(4);
-        //characters
-        int turnsInJail1 = 0;
-        int turnsInJail2 = 0;
-        int turnsInJail3 = 0;
-        int turnsInJail4 = 0;
         //tarjetas
         Chance chance = new Chance();
         Nasdaq nasdaq = new Nasdaq();
-        //lista de tarjetas para escapar de la carcel
-        List<int> jugador1 = new List<int>();
-        List<int> jugador2 = new List<int>();
-        List<int> jugador3 = new List<int>();
-        List<int> jugador4 = new List<int>();
+        //lista de fichas
+        List<Image> fichas = new List<Image>();
+        //lista de imagenes de fichas
+        List<Image> figures = new List<Image>();
+
         public PlayGame(int PlayerNumbers)
         {
             PlayGameMusic();
@@ -59,16 +55,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             StartOps();
             //metodo donde añade los jugadores a la lista
             //grid para intercambiar propiedades
-            GridTrade.Visibility = Visibility.Hidden;
-            gridPrestamo.Visibility = Visibility.Hidden;
-
-
+            //var fichas = new List<Image>();
             if (PlayerNumbers == 3)
-            {
-                //en caso de que solo existan 3 jugadores
+            {//en caso de que solo existan 3 jugadores
                 player4.SetID(0);//elimina ID jugador 4
-                lblPlayer4.Margin = new Thickness(1819, 376, -1115, 0);//aleja sus propiedades del board
-                txtDataPlayer4.Margin = new Thickness(1819, 376, -1115, 0); //aleja sus propiedades del board
                 player1.SetMoney(1500);
                 player1.setJail(false);
                 player1.SetPosition(0);
@@ -82,28 +72,31 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 players.Add(player2);
                 players.Add(player3);
                 //setea la posicion, e dinero y que no estén en carcel
-                imgplayer1.Margin = new Thickness(549,395,217,25);
+                imgplayer1.Margin = new Thickness(549, 395, 217, 25);
                 imgplayer2.Margin = new Thickness(549, 395, 217, 25);
                 imgplayer3.Margin = new Thickness(549, 395, 217, 25);
+                //fichas se agregan a lista para fichas
+                fichas.Add(imgplayer1);
+                fichas.Add(imgplayer2);
+                fichas.Add(imgplayer3);
+                //fichas se agregan a otra lista para mostrar turnos
+                figures.Add(Facep1);
+                figures.Add(Facep2);
+                figures.Add(Facep3);
                 //mueve las respectivas fotos para a posicion 0 
                 Turn.Enqueue(1);
                 Turn.Enqueue(2);
                 Turn.Enqueue(3);
                 //agrega 3 turnos.
-                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
+                lblDataPlayer1.Content = "$" + player1.GetMoney().ToString();
+                lblDataPlayer2.Content = "$" + player2.GetMoney().ToString();
+                lblDataPlayer3.Content = "$" + player3.GetMoney().ToString();
                 playernumber = 3;
             }
-            else if(PlayerNumbers == 2)
-            {
-                //lo mismo que el primero
+            else if (PlayerNumbers == 2)
+            {//lo mismo que el primero
                 player4.SetID(0);
                 player3.SetID(0);
-                lblPlayer4.Margin = new Thickness(1819, 376, -1115, 0);
-                txtDataPlayer4.Margin = new Thickness(1819, 376, -1115, 0);
-                lblPlayer3.Margin = new Thickness(1819, 376, -1115, 0);
-                txtDataPlayer3.Margin = new Thickness(1819, 376, -1115, 0);
                 player1.SetMoney(1500);
                 player1.setJail(false);
                 player1.SetPosition(0);
@@ -114,15 +107,18 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 players.Add(player2);
                 imgplayer1.Margin = new Thickness(549, 395, 217, 25);
                 imgplayer2.Margin = new Thickness(549, 395, 217, 25);
+                fichas.Add(imgplayer1);
+                fichas.Add(imgplayer2);
+                figures.Add(Facep1);
+                figures.Add(Facep2);
                 Turn.Enqueue(1);
                 Turn.Enqueue(2);
-                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
+                lblDataPlayer1.Content = "$" + player1.GetMoney().ToString();
+                lblDataPlayer2.Content = "$" + player2.GetMoney().ToString();
                 playernumber = 2;
             }
             else
-            {
-                //en caso que hayan 4 jugadores
+            {//en caso que hayan 4 jugadores
                 player1.SetMoney(1500);
                 player1.setJail(false);
                 player1.SetPosition(0);
@@ -143,14 +139,22 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 imgplayer2.Margin = new Thickness(549, 395, 217, 25);
                 imgplayer3.Margin = new Thickness(549, 395, 217, 25);
                 imgplayer4.Margin = new Thickness(549, 395, 217, 25);
+                fichas.Add(imgplayer1);
+                fichas.Add(imgplayer2);
+                fichas.Add(imgplayer3);
+                fichas.Add(imgplayer4);
+                figures.Add(Facep1);
+                figures.Add(Facep2);
+                figures.Add(Facep3);
+                figures.Add(Facep4);
                 Turn.Enqueue(1);
                 Turn.Enqueue(2);
                 Turn.Enqueue(3);
                 Turn.Enqueue(4);
-                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
+                lblDataPlayer1.Content = "$" + player1.GetMoney().ToString();
+                lblDataPlayer2.Content = "$" + player2.GetMoney().ToString();
+                lblDataPlayer3.Content = "$" + player3.GetMoney().ToString();
+                lblDataPlayer4.Content = "$" + player4.GetMoney().ToString();
                 playernumber = 4;
             }
         }
@@ -164,14 +168,13 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 ng.Show();
                 this.Close();
                 musicback();
-            }    
+            }
 
         }
 
         private void StartOps()
         {
             //CREA TODAS LAS CASILLAS CON SU RESPECTIVA INFORMACION
-            //LOS NOMBRES OK
             holdings s0 = new holdings(Color.None, 549, 395, 217, 25, 0, 999999999, "Start", 999999999);
             holdings s1 = new holdings(Color.Purple, true, false, 503, 402, 263, 18, 1, 60, "BCI", 1);
             holdings s2 = new holdings(Color.None, 466, 402, 300, 18, 2, 0, "Nasdaq Card", 1);
@@ -256,10 +259,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
 
         public void actualizarDinero()// metodo para actualizar dinero y empresas en cajas de texto y combo boxes de cada jugador
         {
-            txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-            txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-            txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-            txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
+            lblDataPlayer1.Content = "$" + player1.GetMoney().ToString();
+            lblDataPlayer2.Content = "$" + player2.GetMoney().ToString();
+            lblDataPlayer3.Content = "$" + player3.GetMoney().ToString();
+            lblDataPlayer4.Content = "$" + player4.GetMoney().ToString();
         }
 
         public void actualizarEmpresas()//metodo para actualizar las listas de empresas despues de un trade
@@ -278,7 +281,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             {
                 if (players[i].GetID() == 1)
                 {
-                    empresas1 = players[i].GetHoldings();
+                    empresas1 = players[i].getHoldings();
                     for (int j = 0; j < empresas1.Count; j++)
                     {
                         cboPropiedades1.Items.Add(empresas1[j].getName() + ", " + empresas1[j].getColor());
@@ -286,7 +289,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
                 if (players[i].GetID() == 2)
                 {
-                    empresas2 = players[i].GetHoldings();
+                    empresas2 = players[i].getHoldings();
                     for (int j = 0; j < empresas2.Count; j++)
                     {
                         cboPropiedades2.Items.Add(empresas2[j].getName() + ", " + empresas2[j].getColor());
@@ -294,7 +297,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
                 if (players[i].GetID() == 3)
                 {
-                    empresas3 = players[i].GetHoldings();
+                    empresas3 = players[i].getHoldings();
                     for (int j = 0; j < empresas3.Count; j++)
                     {
                         cboPropiedades3.Items.Add(empresas3[j].getName() + ", " + empresas3[j].getColor());
@@ -302,7 +305,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
                 if (players[i].GetID() == 4)
                 {
-                    empresas4 = players[i].GetHoldings();
+                    empresas4 = players[i].getHoldings();
                     for (int j = 0; j < empresas4.Count; j++)
                     {
                         cboPropiedades4.Items.Add(empresas4[j].getName() + ", " + empresas4[j].getColor());
@@ -320,7 +323,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
         {
             bool sinDinero = false;
 
-            for(int i = 0; i < players.Count; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 if (players[i].bancarrota() == true)
                 {
@@ -338,17 +341,17 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
 
             characters ganador = new characters();//nuevo character donde se asigna el jugador con mayor dinero
 
-            for(int i = 0; i < players.Count; i++)
+            for (int i = 0; i < players.Count; i++)
             {
                 efectivo = 0;
                 valorActivos = 0;
                 efectivo = players[i].GetMoney();
-                for(int j = 0; j < players[i].getHoldings().Count; j++)
+                for (int j = 0; j < players[i].getHoldings().Count; j++)
                 {
                     valorActivos += players[i].getHoldings()[j].getPrice();//se suma los valores de los activos
                 }
 
-                if(efectivo + valorActivos > riquezas)//si es verdad, ganador se asigna a players[i]
+                if (efectivo + valorActivos > riquezas)//si es verdad, ganador se asigna a players[i]
                 {
                     riquezas = 0;
                     riquezas = efectivo + valorActivos;
@@ -356,7 +359,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
             }
             MessageBox.Show("El ganador es player " + ganador.GetID().ToString());
-        } //revisar
+        }//revisar
 
         public void terminarJuego()
         {
@@ -365,1070 +368,157 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             this.Close();
         } //revisar
 
-        public void Iniciarturno()
+        public void iniciarTurnos()
         {
             //cada vez que inicia
             Turn.Dequeue();
             //se quita un turno
             Turnoactual++;
             //y el turno actual sube (esto solo sirve para en caso de que se planee saber quien mueve, es decir, indica quien se está moviendo)
-            //cuando turno actuala es mayor al numero de jugadores se repite, cosa de que si son 4 jugadores, solamente pueden haber 4 turnos
+            //cuando turno actual es mayor al numero de jugadores se repite, cosa de que si son 4 jugadores, solamente pueden haber 4 turnos
             if (Turnoactual > playernumber)
             {
                 Turnoactual = 1;
-                //cuando turno es mayor a el numero de jugadores, se repite al primer turno
             }
 
-            if (Turnoactual == 1)
-            //si el turno actual es 1, le toca moverse al jugador 1
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
             {
-                txtMapData.Text = "Comienza el turno del Jugador 1";
-                Facep1.Margin = new Thickness(600, 250, 0, 0);
-                Facep2.Margin = new Thickness(1018, 198, -418, 54);
-                Facep3.Margin = new Thickness(1018, 198, -418, 54);
-                Facep4.Margin = new Thickness(1018, 198, -418, 54);
-
-                if (player1.getJail() == false) //si no está preso?
+                if (players[i].GetID() == jugadorActual)
                 {
-                    //////s i s t e m a    d e    t u r n o s///////////////////
-                    int valor = dice.throwDice();
-                    player1.SetPosition(player1.GetPosition() + valor);//se le agrega el valor de los dados a la posicion actual, es decir, su puesto más los dados
-                    if (player1.GetPosition() >= 40)
-                        //si el jugador 1 esta en la posicion superior a 40, significa que ya dio una buela
+                    if (players[i].getJail() == false)
                     {
-                        player1.SetPosition(player1.GetPosition() - 40); //se le quita 40 posiciones para que si está en la 43, quede en la 3. 
-                        player1.SetMoney(player1.GetMoney() + 200); // se le da el dinero por su vuelta
-                        txtDataPlayer1.Text = "$" + player1.GetMoney().ToString(); //actualiza dinero
-                    }
-
-                    /////////////////////////////////////////////////
-                    ////////////M O V I M I E N T O ////////////////
-                    ///////////////////////////////////////////////
-
-                    for (int i = 0; i <= player1.GetPosition(); i++)
-                    //Mientras I sea menorque o igual a su posicion actual, se le agrega uno a I
-                    // es decir, i reccore todos los numeros hasta la posicion actual (la con el valor de los dados) y cuando la supera
-                    {
-                        if (i >= 40)
-                        {
-                            txtMapData.Text = "Random event player 1: ¡Dirígete a 'GO' y ganas dinero!";
-                            player1.SetPosition(0);
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            player1.SetMoney(player1.GetMoney() + 200);
-                            i = 0;
+                        int valor = dice.throwDice();
+                        players[i].SetPosition(players[i].GetPosition() + valor);
+                        if (players[i].GetPosition() >= 40)
+                        {//si el jugador 1 esta en la posicion superior a 40, significa que ya dio una vuelta
+                            players[i].SetPosition(players[i].GetPosition() - 40); //se le quita 40 posiciones para que si está en la 43, quede en la 3. 
+                            players[i].SetMoney(players[i].GetMoney() + 200); // se le da el dinero por su vuelta
                         }
-                        if (Spaces[i].position.Equals(player1.GetPosition()))
-                        {
-                            //si el espacio es equivalente a la posicion actual, moverlo a la posicion de ese espacio
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-
-                        }
-                        if (Spaces[30].position.Equals(player1.GetPosition()))
-                        {
-                            //si cae a la carcel, se mueve a la carcel
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                            player1.jailed();
-                            player1.SetPosition(10);
-                        }
-                        
-                    }
-                    //imprime los dos dados en los espacios de los dados.
-                    txtDice1.Text = dice.getDice1().ToString();
-                    txtDice2.Text = dice.getDice2().ToString();
-                    txtDice3.Text = dice.getDice3().ToString();
-                }
-                else
-                {
-                    //metodo para salir de la carcel
-                    escapeJail();
-                }
-                //////////////////////////////////////////////////////////////////////
-                ////////////////other moves: like taxes and planes////////////////////
-                //////////////////////////////////////////////////////////////////////
-                ///TAX
-                if (Spaces[38].position.Equals(player1.GetPosition()))
-                {
-                    // si no tiene dinero para pagar que pasaba, lo tengo que crear yo?
-                    // si no lo mando para la carcel
-                    if (player1.GetMoney() >= 300)
-                    {
-                        double impr = player1.GetMoney() - 300;
-                        txtMapData.Text = "jugador 1 paga impuestos, tienes " + player1.GetMoney() + "$ pero quedas con " + impr;
-                        player1.SetMoney(player1.GetMoney() - 300);
-
-                    }
-                    else
-                    {
-                        txtMapData.Text = "No tienes para pagar impuestos! \n pasas la noche en la cárcel!";
-                        player1.SetPosition(10);
-                    }
-                }
-                ///PLANE
-                else if (Spaces[4].position.Equals(player1.GetPosition()) || Spaces[28].position.Equals(player1.GetPosition()) || Spaces[35].position.Equals(player1.GetPosition()))
-                {
-                    
-                    Random DiceExtra = new Random();
-                    int extradice = DiceExtra.Next(0, 40);
-                    txtMapData.Text = "Woah, el jugador 1 tomó un avión con destino a la casilla " + extradice;
-                    player1.SetPosition(extradice);
-                    imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[extradice].axis.x), Convert.ToDouble(Spaces[extradice].axis.y), Convert.ToDouble(Spaces[extradice].axis.z), Convert.ToDouble(Spaces[extradice].axis.s));
-                }
-                ///
-
-                ////////////////////////////////////////////
-                ///////////////carta chance/////////////////
-                ////////////////////////////////////////////
-                if (Spaces[7].position.Equals(player1.GetPosition()) || Spaces[22].position.Equals(player1.GetPosition()) || Spaces[25].position.Equals(player1.GetPosition()) || Spaces[36].position.Equals(player1.GetPosition()))
-                {
-                   
-                    
-                    
-                        Random r = new Random();
-                        int rc = r.Next(0, 14);
-                        // lee la descripcion de la carta
-                        chance.drawChanceCards(rc);
-
-
-                        player1.SetMoney(player1.GetMoney() + chance.UpdateDinero(rc));
-                        txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                        if (chance.cadaJugadorPaga(rc) != 0) //Tarjeta cada jugador paga
-                        {
-                            if (playernumber == 2) // si es que hay dos jugadores
+                        /////////////////////////////////////////////////
+                        //////////// M O V I M I E N T O ///////////////
+                        ///////////////////////////////////////////////
+                        for (int j = 0; j <= players[i].GetPosition(); j++)
+                        {/////mientras j sea menor que o igual a su posicion actual, se le agrega uno a j/////
+                            if (j >= 40)
                             {
-                                player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
+                                j = 0;
+                                players[i].SetPosition(0);
+                                players[i].SetMoney(players[i].GetMoney() + 200);
 
-                                player1.SetMoney(player1.GetMoney() + 10); //player 1 recibe $10
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                            }
-                            else if (playernumber == 3) //si es que hay 3 jugadores
-                            {
-                                player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 3
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 20); //player 1 recibe $20
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4) //si es que hay 4 jugadores
-                            {
-                                player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 3
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 4
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 30); //player 1 recibe $30
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                            }
-
-                        }
-                        if (chance.moverFicha(rc) != 80)
-                        {
-
-                            if (chance.moverFicha(rc) == 0)
-                            {
-
-                                player1.SetPosition(chance.moverFicha(rc));
-                                imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                                player1.SetMoney(player1.GetMoney() + 200); // se le da el dinero por su vuelta
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString(); //actualiza dinero
-                            }
-                            else
-                            {
-                                player1.SetPosition(chance.moverFicha(rc));
-                                imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-                            }
-
-                        }
-                        else if (chance.gotojail(rc) != 80)
-                        {
-                            player1.jailed();
-                            player1.SetPosition(chance.gotojail(rc));
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                        }
-                        else if (chance.devolverTarjetaF(rc) == true)
-                        {
-                            jugador1.Add(1);//se agrega un 1 a la lista, que despues se puede utilizar para escapar de la carcel
-                        }
-                    
-                }
-                    if (Spaces[2].position.Equals(player1.GetPosition()) || Spaces[5].position.Equals(player1.GetPosition()) || Spaces[15].position.Equals(player1.GetPosition()) || Spaces[17].position.Equals(player1.GetPosition()))
-                    {
-                    ////////////////////////////////////////////
-                    ///////////////Carta Nasdaq/////////////////
-                    ////////////////////////////////////////////
-                   
-                    Random r = new Random();
-                        int rc = r.Next(0, 13);
-                        //lee la descripcion de la carta
-                        nasdaq.drawNasdaqCard(rc);
-                        player1.SetMoney(player1.GetMoney() + nasdaq.UpdateDinero(rc));
-                        txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                        if (nasdaq.pagarACadaJugador(rc) != 0) // el jugador le paga $50 a cada uno de los jugadores
-                        {
-                            if (playernumber == 2)
-                            {
-                                player1.SetMoney(player1.GetMoney() + nasdaq.pagarACadaJugador(rc)); //jugador 1 paga 50
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            }
-                            else if (playernumber == 3)
-                            {
-                                player1.SetMoney(player1.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 2)); //jugador 1 paga 100
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + 50);
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4)
-                            {
-                                player1.SetMoney(player1.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 3)); //jugador 1 paga 150
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + 50);
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + 50);
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                            }
-                        }
-                        if (nasdaq.moverFicha(rc) != 80)
-                        {
-                            
-                            if (nasdaq.moverFicha(rc) == 0)
-                            {
-                                player1.SetPosition(nasdaq.moverFicha(rc));
-                                player1.SetMoney(player1.GetMoney() + 200); // se le da el dinero por su vuelta
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString(); //actualiza dinero
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            }
-                        else
-                        {
-                            player1.SetPosition(nasdaq.moverFicha(rc));
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                        }
-
-                         }
-                        else if(nasdaq.gotojail(rc) != 80)
-                        {
-                            player1.jailed();
-                            player1.SetPosition(nasdaq.gotojail(rc));
-                             imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                        }
-                        else if (nasdaq.moverFicha(rc) == 12)
-                         {
-                            if(player1.GetPosition() <= 17 || player1.GetPosition() >= 5)
-                            {
-                            player1.SetPosition(nasdaq.moverFicha(rc));
-                            }                         
-                         }
-                        else if (nasdaq.moverFicha(rc) == 33)
-                         {
-                            if(player1.GetPosition() == 3)
-                            {
-                            player1.SetPosition(nasdaq.moverFicha(rc));
-                            }
-                         }
-                       
-                         
-                    }           
-            }
-            //////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////////
-            ///////////////////C O M I E N Z A    J U G A D O R    D O S //////////////////
-            //////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////
-            //para revirsar codigo, revisar jugador 1
-            else if (Turnoactual == 2)
-            {
-                txtMapData.Text = "Comienza el turno del Jugador 2";
-                Facep1.Margin = new Thickness(1018, 198, -418, 54);
-                Facep2.Margin = new Thickness(600, 250, 0, 0);
-                Facep3.Margin = new Thickness(1018, 198, -418, 54);
-                Facep4.Margin = new Thickness(1018, 198, -418, 54);
-                if (player2.getJail() == false)
-                {
-                    //este es el que revisa si esta en la carcel o no, faltan mensajitos o algo
-                    //idea: poner un texto sobre todo con la misma animación del presstart cuando vaya a Jail, para no usar 
-                    //un message box, que igual es feo.- 
-                    int valor = dice.throwDice();
-                    player2.SetPosition(player2.GetPosition() + valor);
-                    if (player2.GetPosition() >= 40)
-                    {
-                        player2.SetPosition(player2.GetPosition() - 40);
-                        player2.SetMoney(player2.GetMoney() + 200);
-                        txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                    }            
-                    ///movimiento//
-                    for (int i = 0; i <= player2.GetPosition(); i++)
-                    {
-
-                        if (i >= 40)
-                        {
-                            txtMapData.Text = "Random event player 2: ¡Dirígete a 'GO' y ganas dinero!";
-                            player2.SetPosition(0);
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            player2.SetMoney(player2.GetMoney() + 200);
-                            i = 0;
-                        }
-
-                        else if (Spaces[i].position.Equals(player2.GetPosition()))
-                        {
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
-                        if (Spaces[30].position.Equals(player2.GetPosition()))
-                        {
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                            player2.jailed();
-                            player2.SetPosition(10);
-                        }
-                    }
-                    txtDice1.Text = dice.getDice1().ToString();
-                    txtDice2.Text = dice.getDice2().ToString();
-                    txtDice3.Text = dice.getDice3().ToString();
-                }
-                else
-                {
-                    escapeJail();
-                }
-                //////////////////////////////////////////////////////////////////////
-                /////////////////////other moves: like taxes and planes//////////////
-                ////////////////////////////////////////////////////////////////////
-                if (Spaces[38].position.Equals(player2.GetPosition()))
-                {
-                    // si no tiene dinero para pagar que pasaba, lo tengo que crear yo?
-                    // si no lo mando para la carcel
-                    if (player2.GetMoney() >= 300)
-                    {
-                        double impr = player2.GetMoney() - 300;
-                        txtMapData.Text = "jugador 2 paga impuestos, tienes " + player2.GetMoney() + "$ pero quedas con " + impr;
-                        player2.SetMoney(player2.GetMoney() - 300);
-                    }
-                    else
-                    {
-                        txtMapData.Text = "No tienes para pagar impuestos! \n pasas la noche en la cárcel!";
-                        player2.SetPosition(10);
-                    }
-                }
-                else if (Spaces[4].position.Equals(player3.GetPosition()) || Spaces[28].position.Equals(player3.GetPosition()) || Spaces[35].position.Equals(player3.GetPosition()))
-                {
-                    Random DiceExtra = new Random();
-                    int extradice = DiceExtra.Next(0, 40);
-                    txtMapData.Text = "Woah, el jugador 1 tomó un avión con destino a la casilla " + extradice;
-                    player2.SetPosition(extradice);
-                    imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[extradice].axis.x), Convert.ToDouble(Spaces[extradice].axis.y), Convert.ToDouble(Spaces[extradice].axis.z), Convert.ToDouble(Spaces[extradice].axis.s));
-                }
-                ///////////////carta chance/////////////////
-                if (Spaces[7].position.Equals(player2.GetPosition()) || Spaces[22].position.Equals(player2.GetPosition()) || Spaces[25].position.Equals(player2.GetPosition()) || Spaces[36].position.Equals(player2.GetPosition()))
-                    {
-                        
-                        Random r = new Random();
-                        int rc = r.Next(0, 14);
-                        //lee la descripcion de la carta
-                        chance.drawChanceCards(rc);
-                        player2.SetMoney(player2.GetMoney() + chance.UpdateDinero(rc));
-                        txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                        if (chance.cadaJugadorPaga(rc) != 0)
-                        {
-                            if (playernumber == 2) // si es que hay dos jugadores
-                            {
-                                player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 10); //player 2 recibe $10
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            }
-                            else if (playernumber == 3) //si es que hay 3 jugadores
-                            {
-                                player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 3
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 20); //player 2 recibe $20
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4) //si es que hay 4 jugadores
-                            {
-                                player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 3
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 4
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                                player2.SetMoney(player2.GetMoney() + 30); //player 2 recibe $30
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            }
-
-                        }
-                        if (chance.moverFicha(rc) != 80)
-                        {
-                        if (chance.moverFicha(rc) == 0) //ir a go y cobrar 200
-                        {
-                            player2.SetPosition(chance.moverFicha(rc));
-                            player2.SetMoney(player2.GetMoney() + 200); // se le da el dinero por su vuelta
-                            txtDataPlayer2.Text = "$" + player2.GetMoney().ToString(); //actualiza dinero
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                        }
-                        else
-                        {
-                            player2.SetPosition(chance.moverFicha(rc));
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                        }
-                    }
-                        else if (chance.gotojail(rc) != 80)
-                        {
-                            player2.jailed();
-                            player2.SetPosition(chance.gotojail(rc));
-                        imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                    }
-                        else if (chance.devolverTarjetaF(rc) == true)
-                        {
-                            jugador2.Add(1);//se agrega un 1 a la lista, que despues se puede utilizar para escapar de la carcel
-                        }
-
-                    }
-                    if (Spaces[2].position.Equals(player2.GetPosition()) || Spaces[5].position.Equals(player2.GetPosition()) || Spaces[15].position.Equals(player2.GetPosition()) || Spaces[17].position.Equals(player2.GetPosition()))
-                    {
-                        ///////////////Carta Nasdaq/////////////////
-                        Random r = new Random();
-                        int rc = r.Next(0, 13);
-                        //lee la descripcion de la carta
-                        nasdaq.drawNasdaqCard(rc);
-                        player2.SetMoney(player2.GetMoney() + nasdaq.UpdateDinero(rc));
-                        txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                        if (nasdaq.pagarACadaJugador(rc) != 0) // el jugador le paga $50 a cada uno de los jugadores
-                        {
-                            if (playernumber == 2)
-                            {
-                                player2.SetMoney(player2.GetMoney() + nasdaq.pagarACadaJugador(rc)); //jugador 2 paga 50
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                            }
-                            else if (playernumber == 3)
-                            {
-                                player2.SetMoney(player2.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 2)); //jugador 2 paga 100
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + 50);
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4)
-                            {
-                                player2.SetMoney(player2.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 3)); //jugador 2 paga 150
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + 50);
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + 50);
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-                            }
-                        }
-                        if (nasdaq.moverFicha(rc) != 80)
-                        {
-                           
-                        if (nasdaq.moverFicha(rc) == 0)
-                            {
-                                player2.SetPosition(nasdaq.moverFicha(rc));
-                                player2.SetMoney(player2.GetMoney() + 200); // se le da el dinero por su vuelta
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString(); //actualiza dinero
-                                 imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-
-                        }
-                        else
-                        {
-                            player2.SetPosition(nasdaq.moverFicha(rc));
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                        }
-                         }
-                        else if (nasdaq.gotojail(rc) != 80)
-                        {
-                            player2.jailed();
-                            player2.SetPosition(nasdaq.gotojail(rc));
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                         }
-                        else if (nasdaq.moverFicha(rc) == 12)
-                          {
-                            if (player2.GetPosition() <= 17 || player2.GetPosition() >= 5)
-                             {
-                               player2.SetPosition(nasdaq.moverFicha(rc));
-                             }
-                          }
-                        else if (nasdaq.moverFicha(rc) == 33)
-                         {
-                            if (player2.GetPosition() == 3)
-                             {
-                                player2.SetPosition(nasdaq.moverFicha(rc));
-                             }
-                         }
-                        
-
-                }
-                    
-            }
-
-            //////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////////
-            ///////////////////C O M I E N Z A    J U G A D O R    T R E S/////////////////
-            //////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////
-            //para revirsar codigo, revisar jugador 1
-            else if (Turnoactual == 3)
-            {
-                txtMapData.Text = "Comienza el turno del Jugador 3";
-                Facep1.Margin = new Thickness(1018, 198, -418, 54);
-                Facep2.Margin = new Thickness(1018, 198, -418, 54);
-                Facep3.Margin = new Thickness(600, 250, 0, 0);
-                Facep4.Margin = new Thickness(1018, 198, -418, 54);
-                if (player3.getJail() == false)
-                {
-                    int valor = dice.throwDice();
-                    player3.SetPosition(player3.GetPosition() + valor);
-                    if (player3.GetPosition() >= 40)
-                    {
-                        player3.SetPosition(player3.GetPosition() - 40);
-                        player3.SetMoney(player3.GetMoney() + 200);
-                        txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                    }
-                    ////////////////////////////////////////////////////////////
-                    ////////////////////INICIA MOVIMIENTO//////////////////////
-                    //////////////////////////////////////////////////////////
-
-                    for (int i = 0; i <= player3.GetPosition() + 1; i++)
-                    {
-                        if (i >= 40)
-                        {
-                            txtMapData.Text = "Random event player 3: ¡Dirígete a 'GO' y ganas dinero!";
-                            player3.SetPosition(0);
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            player3.SetMoney(player3.GetMoney() + 200);
-                            i = 0;                  
-                        }
-                        else if (Spaces[i].position.Equals(player3.GetPosition()))
-                        {
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
-                        if (Spaces[30].position.Equals(player3.GetPosition()))
-                        {
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                            player3.jailed();
-                            player3.SetPosition(10);
-                        }
-                    }
-                    txtDice1.Text = dice.getDice1().ToString();
-                    txtDice2.Text = dice.getDice2().ToString();
-                    txtDice3.Text = dice.getDice3().ToString();
-                }
-                else
-                {
-                    escapeJail();
-                }
-                //////////////////////////////////////////////////////////////////////
-                /////////////////////other moves: like taxes and planes//////////////
-                ////////////////////////////////////////////////////////////////////
-                if (Spaces[38].position.Equals(player3.GetPosition()))
-                {
-                    // si no tiene dinero para pagar que pasaba, lo tengo que crear yo?
-                    // si no lo mando para la carcel
-                    if (player3.GetMoney() >= 300)
-                    {
-                        double impr = player3.GetMoney() - 300;
-                        txtMapData.Text = "jugador 3 paga impuestos, tienes " + player3.GetMoney() + "$ pero quedas con " + impr;
-                        player3.SetMoney(player3.GetMoney() - 300);
-                    }
-                    else
-                    {
-                        txtMapData.Text = "No tienes para pagar impuestos! \n pasas la noche en la cárcel!";
-                        player3.SetPosition(10);
-                    }
-                }
-                else if (Spaces[4].position.Equals(player3.GetPosition()) || Spaces[28].position.Equals(player3.GetPosition()) || Spaces[35].position.Equals(player3.GetPosition()))
-                {
-                    Random DiceExtra = new Random();
-                    int extradice = DiceExtra.Next(0, 40);
-                    txtMapData.Text = "Woah, el jugador 1 tomó un avión con destino a la casilla " + extradice;
-                    player3.SetPosition(extradice);
-                    imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[extradice].axis.x), Convert.ToDouble(Spaces[extradice].axis.y), Convert.ToDouble(Spaces[extradice].axis.z), Convert.ToDouble(Spaces[extradice].axis.s));
-                }
-                if (Spaces[7].position.Equals(player3.GetPosition()) || Spaces[22].position.Equals(player3.GetPosition()) || Spaces[25].position.Equals(player3.GetPosition()) || Spaces[36].position.Equals(player3.GetPosition()))
-                    {
-                        ///////////////carta chance/////////////////
-                        Random r = new Random();
-                        int rc = r.Next(0, 14);
-                        //lee la descripcion de la carta
-                        chance.drawChanceCards(rc);
-                        player3.SetMoney(player3.GetMoney() + chance.UpdateDinero(rc));
-                        txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                        if (chance.cadaJugadorPaga(rc) != 0)
-                        {
-
-                            if (playernumber == 3) //si es que hay 3 jugadores
-                            {
-                                player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                                player3.SetMoney(player3.GetMoney() + 20); //player 3 recibe $20
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4) //si es que hay 4 jugadores
-                            {
-                                player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 4
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                                player3.SetMoney(player3.GetMoney() + 30); //player 3 recibe $30
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                            }
-
-                        }
-                        if (chance.moverFicha(rc) != 80)
-                        {
-                            if (chance.moverFicha(rc) == 0)
-                            {
-                            player3.SetPosition(chance.moverFicha(rc));
-                            player3.SetMoney(player3.GetMoney() + 200); // se le da el dinero por su vuelta
-                            txtDataPlayer3.Text = "$" + player3.GetMoney().ToString(); //actualiza dinero
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-
-                             }
-                            else
-                            {
-                            player3.SetPosition(chance.moverFicha(rc));
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                            }
-                        }
-                        else if (chance.gotojail(rc) != 80)
-                        {
-                            player3.jailed();
-                            player3.SetPosition(chance.gotojail(rc));
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                    }
-                        else if (chance.devolverTarjetaF(rc) == true)
-                        {
-                            jugador3.Add(1);//se agrega un 1 a la lista, que despues se puede utilizar para escapar de la carcel
-                        }
-                    }
-                    if (Spaces[2].position.Equals(player3.GetPosition()) || Spaces[5].position.Equals(player3.GetPosition()) || Spaces[15].position.Equals(player3.GetPosition()) || Spaces[17].position.Equals(player3.GetPosition()))
-                    {
-                        ///////////////Carta Nasdaq/////////////////
-                        Random r = new Random();
-                        int rc = r.Next(0, 13);
-                        //lee la descripcion de la carta
-                        nasdaq.drawNasdaqCard(rc);
-                        player3.SetMoney(player3.GetMoney() + nasdaq.UpdateDinero(rc));
-                        txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                        if (nasdaq.pagarACadaJugador(rc) != 0) // el jugador le paga $50 a cada uno de los jugadores
-                        {
-                            if (playernumber == 3)
-                            {
-                                player3.SetMoney(player3.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 2)); //jugador 3 paga 100
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            }
-                            else if (playernumber == 4)
-                            {
-                                player3.SetMoney(player3.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 3)); //jugador 3 paga 150
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player4.SetMoney(player4.GetMoney() + 50);
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                            }
-                        }
-                        if (nasdaq.moverFicha(rc) != 80)
-                        {
-                            
-                        if (nasdaq.moverFicha(rc) == 0)
-                            {
-                                player3.SetPosition(nasdaq.moverFicha(rc));
-                                player3.SetMoney(player3.GetMoney() + 200); // se le da el dinero por su vuelta
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString(); //actualiza dinero
-                                imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-
-                        }
-                        else
-                        {
-                            player3.SetPosition(nasdaq.moverFicha(rc));
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                        }
-                    }
-                        else if (nasdaq.gotojail(rc) != 80)
-                        {
-                            player3.jailed();
-                            player3.SetPosition(nasdaq.gotojail(rc));
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                        }
-                        else if (nasdaq.moverFicha(rc) == 12)
-                        {
-                             if (player3.GetPosition() <= 17 || player3.GetPosition() >= 5)
-                                {
-                                     player3.SetPosition(nasdaq.moverFicha(rc));
+                                for (int k = 0; k < fichas.Count; k++)
+                                {//fichas es la lista donde se almacenan las fichas de cada jugador
+                                    if (i == k)//si i = k, se mueve la ficha que corresponde al jugadorActual
+                                    {
+                                        txtMapData.Text = "Random event player" + players[i].GetID() + ": ¡Dirígete a 'GO' y ganas dinero!";
+                                        fichas[k].Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                           Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                                    }
                                 }
-                        }
-                        else if (nasdaq.moverFicha(rc) == 33)
-                        {
-                             if (player3.GetPosition() == 3)
-                             {
-                                player3.SetPosition(nasdaq.moverFicha(rc));
-                             }
-                         }
-                        
-                }
-
-            }
-            //////////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////////
-            ///////////////////C O M I E N Z A    J U G A D O R    C U A T R O/////////////
-            //////////////////////////////////////////////////////////////////////////////
-            /////////////////////////////////////////////////////////////////////////////
-            ////////////////////////////////////////////////////////////////////////////
-            //para revirsar codigo, revisar jugador 1
-            else if (Turnoactual == 4)
-            {
-                txtMapData.Text = "Comienza el turno del Jugador 4";
-                Facep1.Margin = new Thickness(1018, 198, -418, 54);
-                Facep2.Margin = new Thickness(1018, 198, -418, 54);
-                Facep3.Margin = new Thickness(1018, 198, -418, 54);
-                Facep4.Margin = new Thickness(600, 250, 0, 0);
-                if (player4.getJail() == false)
-                {
-                    int valor = dice.throwDice();
-                    player4.SetPosition(player4.GetPosition() + valor);
-                    if (player4.GetPosition() >= 40)
-                    {
-                        player4.SetPosition(player4.GetPosition() - 40);
-                        player4.SetMoney(player4.GetMoney() + 200);
-                        txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-                    }
-                    //////////////M O V I M I E N T O ///////////////////////
-                    for (int i = 0; i <= player4.GetPosition() + 1; i++)
-                    {
-                        if (i > 39)
-                        {
-                            txtMapData.Text = "Random event player 1: ¡Dirígete a 'GO' y ganas dinero!";
-                            player4.SetPosition(0);
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            player4.SetMoney(player4.GetMoney() + 200);
-                            i = 0;
-                        }
-                        else if (Spaces[i].position.Equals(player4.GetPosition()))
-                        {
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
-                        if (Spaces[30].position.Equals(player4.GetPosition()))
-                        {
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                            player4.jailed();
-                            player4.SetPosition(10);
-                        }
-                    }
-                    txtDice1.Text = dice.getDice1().ToString();
-                    txtDice2.Text = dice.getDice2().ToString();
-                    txtDice3.Text = dice.getDice3().ToString();
-                }
-                else
-                {
-                    escapeJail();
-                }
-                //////////////////////////////////////////////////////////////////////
-                /////////////////////other moves: like taxes and planes//////////////
-                ////////////////////////////////////////////////////////////////////
-                if (Spaces[38].position.Equals(player4.GetPosition()))
-                {
-                    // si no tiene dinero para pagar que pasaba, lo tengo que crear yo?
-                    // si no lo mando para la carcel
-                    if (player4.GetMoney() >= 300)
-                    {
-                        double impr = player4.GetMoney() - 300;
-                        txtMapData.Text = "jugador 4 paga impuestos, tienes " + player4.GetMoney() + "$ pero quedas con " + impr;
-                        player4.SetMoney(player4.GetMoney() - 300);
+                            }
+                            if (Spaces[j].position.Equals(players[i].GetPosition()))
+                            {/////si el espacio es equivalente a la posicion actual, moverlo a la posicion de ese espacio/////
+                                for (int k = 0; k < fichas.Count; k++)
+                                {
+                                    if (i == k)
+                                    {
+                                        fichas[k].Margin = new Thickness(Convert.ToDouble(Spaces[j].axis.x), Convert.ToDouble(Spaces[j].axis.y),
+                                                           Convert.ToDouble(Spaces[j].axis.z), Convert.ToDouble(Spaces[j].axis.s));
+                                    }
+                                }
+                            }
+                            if (Spaces[30].position.Equals(players[i].GetPosition()))
+                            {/////si cae a la carcel, se mueve a la carcel/////
+                                players[i].jailed();
+                                players[i].SetPosition(10);
+                                for (int k = 0; k < fichas.Count; k++)
+                                {
+                                    if (i == k)
+                                    {
+                                        fichas[k].Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                           Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                                    }
+                                }
+                            }
+                        }//imprime los dos dados en los espacios de los dados.
+                        txtDice1.Text = dice.getDice1().ToString();
+                        txtDice2.Text = dice.getDice2().ToString();
                     }
                     else
-                    {
-                        txtMapData.Text = "No tienes para pagar impuestos! \n pasas la noche en la cárcel!";
-                        player4.SetPosition(10);
+                    {//metodo para salir de la carcel
+                        escapeJail();
                     }
-                }
-                else if (Spaces[4].position.Equals(player4.GetPosition()) || Spaces[28].position.Equals(player4.GetPosition()) || Spaces[35].position.Equals(player4.GetPosition()))
-                {
-                    Random DiceExtra = new Random();
-                    int extradice = DiceExtra.Next(0, 40);
-                    txtMapData.Text = "Woah, el jugador 1 tomó un avión con destino a la casilla " + extradice;
-                    player4.SetPosition(extradice);
-                    imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[extradice].axis.x), Convert.ToDouble(Spaces[extradice].axis.y), Convert.ToDouble(Spaces[extradice].axis.z), Convert.ToDouble(Spaces[extradice].axis.s));
-                }
 
-                if (Spaces[7].position.Equals(player4.GetPosition()) || Spaces[22].position.Equals(player4.GetPosition()) || Spaces[25].position.Equals(player4.GetPosition()) || Spaces[36].position.Equals(player4.GetPosition()))
+                    if (Spaces[38].position.Equals(players[i].GetPosition()))
                     {
-                        ///////////////carta chance/////////////////
-                        Random r = new Random();
-                        int rc = r.Next(0, 14);
-                        //lee la descripcion de la carta
-                        chance.drawChanceCards(rc);
-                        player4.SetMoney(player4.GetMoney() + chance.UpdateDinero(rc));
-                        txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-                        if (chance.cadaJugadorPaga(rc) != 0)
-                        {
-
-                            player2.SetMoney(player2.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 2
-                            txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                            player3.SetMoney(player3.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 3
-                            txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-                            player1.SetMoney(player1.GetMoney() + chance.cadaJugadorPaga(rc)); //le saca 10 a player 1
-                            txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-
-                            player4.SetMoney(player4.GetMoney() + 30); //player 4 recibe $30
-                            txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-
-                        }
-                        if (chance.moverFicha(rc) != 80)
-                        {
-
-                            if (chance.moverFicha(rc) == 0)
-                            {
-                            player4.SetPosition(chance.moverFicha(rc));
-                            player4.SetMoney(player4.GetMoney() + 200); // se le da el dinero por su vuelta
-                            txtDataPlayer4.Text = "$" + player4.GetMoney().ToString(); //actualiza dinero
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-
-                            }
-                            else
-                            {
-                            player4.SetPosition(chance.moverFicha(rc));
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
-                            }
-                        }
-                        else if (chance.gotojail(rc) != 80)
-                        {
-                            player4.jailed();
-                            player4.SetPosition(chance.gotojail(rc));
-                        imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-
+                        pagarImpuestos(); ////////////IMPUESTOS////////////
                     }
-                        else if (chance.devolverTarjetaF(rc) == true)
-                        {
-                            jugador4.Add(1);//se agrega un 1 a la lista, que despues se puede utilizar para escapar de la carcel
-                        }
-
-                    }
-                    if (Spaces[2].position.Equals(player4.GetPosition()) || Spaces[5].position.Equals(player4.GetPosition()) || Spaces[15].position.Equals(player4.GetPosition()) || Spaces[17].position.Equals(player4.GetPosition()))
+                    else if (Spaces[4].position.Equals(players[i].GetPosition()) || Spaces[28].position.Equals(players[i].GetPosition()) || Spaces[35].position.Equals(players[i].GetPosition()))
                     {
-                        ///////////////Carta Nasdaq/////////////////
-                        Random r = new Random();
-                        int rc = r.Next(0, 13);
-                        //lee la descripcion de la carta
-                        nasdaq.drawNasdaqCard(rc);
-                        player4.SetMoney(player4.GetMoney() + nasdaq.UpdateDinero(rc));
-                        txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-                        if (nasdaq.pagarACadaJugador(rc) != 0) // el jugador le paga $50 a cada uno de los jugadores
+                        tomarVuelo(); ////////////AVIONES////////////
+                    }
+                    if (Spaces[7].position.Equals(players[i].GetPosition()) || Spaces[22].position.Equals(players[i].GetPosition()) || Spaces[25].position.Equals(players[i].GetPosition()) || Spaces[36].position.Equals(players[i].GetPosition()))
+                    {
+                        cartaChance(); ////////////CARTA CHANCE////////////
+                    }
+                    if (Spaces[2].position.Equals(players[i].GetPosition()) || Spaces[5].position.Equals(players[i].GetPosition()) || Spaces[15].position.Equals(players[i].GetPosition()) || Spaces[17].position.Equals(players[i].GetPosition()))
+                    {
+                        cartaNasdaq(); ////////////CARTA NASDAQ////////////
+                    }
+
+                    for (int j = 0; j < figures.Count; j++)
+                    {//lista de imagenes de fichas, para recordar que ficha corresponde a que jugador
+                        if (i == j)
                         {
-                            if (playernumber == 4)
-                            {
-                                player4.SetMoney(player4.GetMoney() + (nasdaq.pagarACadaJugador(rc) * 3)); //jugador 4 paga 150
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString();
-
-                                player1.SetMoney(player1.GetMoney() + 50);
-                                txtDataPlayer1.Text = "$" + player1.GetMoney().ToString();
-                                player2.SetMoney(player2.GetMoney() + 50);
-                                txtDataPlayer2.Text = "$" + player2.GetMoney().ToString();
-                                player3.SetMoney(player3.GetMoney() + 50);
-                                txtDataPlayer3.Text = "$" + player3.GetMoney().ToString();
-
-                            }
+                            figures[j].Margin = new Thickness(723, 236, 37, 173.6);
                         }
-                        if (nasdaq.moverFicha(rc) != 80)
-                        {
-                            
-                            if (nasdaq.moverFicha(rc) == 0)
-                            {
-                                player4.SetPosition(nasdaq.moverFicha(rc));
-                                player4.SetMoney(player4.GetMoney() + 200); // se le da el dinero por su vuelta
-                                txtDataPlayer4.Text = "$" + player4.GetMoney().ToString(); //actualiza dinero
-                                imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y), Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
-                            }
                         else
-                        {
-                            player4.SetPosition(nasdaq.moverFicha(rc));
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
-
+                        {//estas fichas se ponen fuera del tablero
+                            figures[j].Margin = new Thickness(1018, 263, -258, 146.6);
                         }
                     }
-                        else if (nasdaq.gotojail(rc) != 80)
-                        {
-                            player4.jailed();
-                            player4.SetPosition(nasdaq.gotojail(rc));
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y), Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
-                        }
-                        else if (nasdaq.moverFicha(rc) == 12)
-                         {
-                            if (player4.GetPosition() <= 17 || player4.GetPosition() >= 5)
-                            {
-                                player4.SetPosition(nasdaq.moverFicha(rc));
-                            }
-                         }
-                         else if (nasdaq.moverFicha(rc) == 33)
-                         {
-                             if (player4.GetPosition() == 3)
-                             {
-                                player4.SetPosition(nasdaq.moverFicha(rc));
-                             }
-                         }
                 }
             }
+            actualizarDinero();
         }
 
-        //el codigo para salir del Jail
-        public void escapeJail()
+        public void escapeJail()//metodo que determina si el jugador puede salir de la carcel
         {
-                                                           //lista de cartas para escapar de la carcel
-            //escapa de la carcel                                      // |
-            if (Turnoactual == 1)                                      // |
-            {                                                          // |
-                                                                       // |
-                int valor = dice.throwDice();                          // v
-                if (dice.isDouble() == true || turnsInJail1 == 3 || jugador1.Count != 0)
-                //revisa si salio un numero repetido, o si ya pasaron los 3 turnos
-                {
-                    jugador1.Clear();
-                    turnsInJail1 = 0;
-                    player1.free();
-                    player1.SetPosition(player1.GetPosition() + valor);
+            List<int> tarjetas = new List<int>();
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
+            {                                                                      //lista de cartas para escapar de la carcel
+                if (players[i].GetID() == jugadorActual)                                 //|
+                {                                                                        //|
+                    int valor = dice.throwDice();                                        //V
+                    if (dice.isDouble() || players[i].getTurnsJail() == 3 || players[i].getTarjetas().Count != 0)
+                    {//condiciones para escapar de la carcel
+                        tarjetas = players[i].getTarjetas();//lista de tarjetas para escapar
+                        tarjetas.Remove(0);//se elimina una carta de la lista
+                        players[i].SetTurnsJail(0);
+                        players[i].free();
+                        players[i].SetPosition(players[i].GetPosition() + valor);
 
-                    for (int i = 0; i <= player1.GetPosition(); i++)
-                    {
-                        if (Spaces[i].position.Equals(player1.GetPosition()))
-                        {
-                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
+                        for (int j = 0; j < players[i].GetPosition(); j++)
+                        {//loop para encontrar posicion del jugador en el tablero
+                            if (Spaces[j].position.Equals(players[i].GetPosition()))
+                            {
+                                for (int k = 0; k < fichas.Count; k++)
+                                {//loop para encontrar ficha que corresponda a players[i]
+                                    if (i == k)
+                                    {
+                                        fichas[k].Margin = new Thickness(Convert.ToDouble(Spaces[j].axis.x), Convert.ToDouble(Spaces[j].axis.y),
+                                                          Convert.ToDouble(Spaces[j].axis.z), Convert.ToDouble(Spaces[j].axis.s));
+                                    }
+                                }
+                            }
                         }
                     }
-                }
-                if (dice.isDouble() == false)
-                {
-                    //de lo contrario, suma 1 en el contador de turnos para salir
-                    turnsInJail1++;
-                }
-                txtDice1.Text = dice.getDice1().ToString();
-                txtDice2.Text = dice.getDice2().ToString();
-                txtDice3.Text = dice.getDice3().ToString();
-            }
-            else if (Turnoactual == 2)
-            {
-                int valor = dice.throwDice();
-                if (dice.isDouble() == true || turnsInJail2 == 3 || jugador2.Count != 0)
-                {
-                    jugador2.Clear();
-                    turnsInJail2 = 0;
-                    player2.free();
-                    player2.SetPosition(player2.GetPosition() + valor);
-
-                    for (int i = 0; i <= player2.GetPosition(); i++)
+                    if (dice.isDouble() == false)
                     {
-                        if (Spaces[i].position.Equals(player2.GetPosition()))
-                        {
-                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
+                        players[i].SetTurnsJail(players[i].getTurnsJail() + 1);
                     }
                 }
-                if (dice.isDouble() == false)
-                {
-                    turnsInJail2++;
-                }
-                txtDice1.Text = dice.getDice1().ToString();
-                txtDice2.Text = dice.getDice2().ToString();
-                txtDice3.Text = dice.getDice3().ToString();
-            }
-            else if (Turnoactual == 3)
-            {
-                int valor = dice.throwDice();
-                if (dice.isDouble() == true || turnsInJail3 == 3 || jugador3.Count != 0)
-                {
-                    jugador3.Clear();
-                    turnsInJail3 = 0;
-                    player3.free();
-                    player3.SetPosition(player3.GetPosition() + valor);
-
-                    for (int i = 0; i <= player3.GetPosition(); i++)
-                    {
-                        if (Spaces[i].position.Equals(player3.GetPosition()))
-                        {
-                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
-                    }
-                }
-                if (dice.isDouble() == false)
-                {
-                    turnsInJail3++;
-                }
-                txtDice1.Text = dice.getDice1().ToString();
-                txtDice2.Text = dice.getDice2().ToString();
-                txtDice3.Text = dice.getDice3().ToString();
-            }
-            else if (Turnoactual == 4)
-            {
-                int valor = dice.throwDice();
-                if (dice.isDouble() == true || turnsInJail4 == 3 || jugador4.Count != 0)
-                {
-                    jugador4.Clear();
-                    turnsInJail4 = 0;
-                    player4.free();
-                    player4.SetPosition(player4.GetPosition() + valor);
-
-                    for (int i = 0; i <= player4.GetPosition(); i++)
-                    {
-                        if (Spaces[i].position.Equals(player4.GetPosition()))
-                        {
-                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[i].axis.x), Convert.ToDouble(Spaces[i].axis.y), Convert.ToDouble(Spaces[i].axis.z), Convert.ToDouble(Spaces[i].axis.s));
-                        }
-                    }
-                }
-                if (dice.isDouble() == false)
-                {
-                    turnsInJail4++;
-                }
-                txtDice1.Text = dice.getDice1().ToString();
-                txtDice2.Text = dice.getDice2().ToString();
-                txtDice3.Text = dice.getDice3().ToString();
             }
         }
 
@@ -1442,8 +532,8 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     int position = players[i].GetPosition();
 
                     if (Spaces[position].getOwner() == 0 || Spaces[position].getOwner() == jugadorActual)
-                    {
-                        players[i].GetID();
+                    {//este if es para ver si la empresa no tiene dueño o si el dueño es el juagdorActual
+                        players[i].GetID();// este linea no hace nada
                     }
                     else if (Spaces[position].getOwner() != jugadorActual)
                     {
@@ -1451,13 +541,11 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                         {
                             if (players[j].GetID() == Spaces[position].getOwner() && Spaces[position].getPrestamo() == false)
                             {
-                                //paga
                                 double monto = Spaces[position].getPrice() / 10;
                                 int id = players[j].GetID();
                                 Spaces[position].LevelUp();
-                                //msgbox, cambiar por texto ojalá, evitar messagebox
                                 txtMapData.Text = "tienes que pagar $" + monto + " al player " + id;
-                                MessageBox.Show("tienes que pagar " + monto + " al player " + id);
+                                //MessageBox.Show("tienes que pagar $" + monto + " al player " + id);
                                 players[i].pagar(monto, players[j]);
                                 break;
                             }
@@ -1465,18 +553,300 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     }
                 }
             }
-            actualizarDinero();          
+            actualizarDinero();
+        }
+
+        public void pagarImpuestos()//metodo para pagar impuestos si el jugador cae en la casilla de impuestos
+        {
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
+            {//encontramos el jugadorActual
+                if (players[i].GetID() == jugadorActual)
+                {
+                    if (players[i].GetMoney() >= 300)
+                    {//si tiene suficiente dinero, le quitamos el monto del impuesto
+                        double dinero = players[i].GetMoney() - 300;
+                        txtMapData.Text = "Tienes que pagar impuestos, tienes " + players[i].GetMoney() + "$ pero quedas con " + dinero;
+                        players[i].SetMoney(players[i].GetMoney() - 300);
+                    }
+                    else
+                    {// si no tiene suficiente dinero, se va a la carcel
+                        txtMapData.Text = "No tienes para pagar impuestos! \n pasas la noche en la cárcel!";
+                        players[i].SetPosition(10);
+                    }
+                }
+                break;
+            }
+            actualizarDinero();
+        }
+
+        public void tomarVuelo()//metodo donde se asigna una posicion nueva al azar, al jugadorActual
+        {
+            Random DiceExtra = new Random();
+            int extradice = DiceExtra.Next(0, 40);//se elige una casilla al azar y el jugador tiene que mover ahi
+
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
+            {//encontramos el jugadorActual
+                if (players[i].GetID() == jugadorActual)
+                {
+                    txtMapData.Text = "Whoa, player" + players[i].GetID() + " tomó un avión con destino a la casilla " + extradice;
+                    players[i].SetPosition(extradice);
+
+                    for (int j = 0; j < fichas.Count; j++)
+                    {
+                        if (i == j)
+                        {
+                            fichas[j].Margin = new Thickness(Convert.ToDouble(Spaces[extradice].axis.x), Convert.ToDouble(Spaces[extradice].axis.y),
+                                               Convert.ToDouble(Spaces[extradice].axis.z), Convert.ToDouble(Spaces[extradice].axis.s));
+                        }
+                    }
+                }
+            }
+            actualizarDinero();
+        }
+
+        public void cartaChance()//metodo para interactuar con cartas chance
+        {
+            Random r = new Random();
+            int rc = r.Next(0, 14);
+            // lee la descripcion de la carta
+            chance.drawChanceCards(rc);
+
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
+            {//encontramos el jugadorActual
+                if (players[i].GetID() == jugadorActual)
+                {
+                    players[i].SetMoney(players[i].GetMoney() + chance.UpdateDinero(rc));
+                    //////////////////////////////////////////////////////////////////////
+                    if (chance.moverFicha(rc) != 80)  ////////////////CARTA QUE MUEVE JUGADOR A OTRO CASILLA////////////////
+                    {                                //////////////////////////////////////////////////////////////////////
+                        if (chance.moverFicha(rc) == 0)
+                        {
+                            players[i].SetPosition(chance.moverFicha(rc));
+                            players[i].SetMoney(players[i].GetMoney() + 200); // se le da el dinero por su vuelta
+                            for (int j = 0; j < fichas.Count; j++)
+                            {//se encuentra la ficha que corresponde al jugadorActual
+                                if (i == j)
+                                {
+                                    fichas[j].Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                       Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                                }
+                            }
+                        }
+                        else
+                        {
+                            players[i].SetPosition(chance.moverFicha(rc));
+                            for (int j = 0; j < fichas.Count; j++)
+                            {
+                                if (i == j)
+                                {
+                                    fichas[j].Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y),
+                                    Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
+                                }
+                            }
+                        }
+                    }                              ////////////////////////////////////////////////////////////////
+                    if (chance.gotojail(rc) != 80) ////////////////CARTA QUE LLEVA JUGADOR A CARCEL////////////////
+                    {                              ////////////////////////////////////////////////////////////////
+                        players[i].jailed();
+                        players[i].SetPosition(chance.gotojail(rc));
+                        for (int j = 0; j < fichas.Count; j++)
+                        {
+                            if (i == j)
+                            {
+                                fichas[j].Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                    Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                            }
+                        }
+                    }
+                    ///////////////////////////////////////////////////////////////
+                    if (chance.devolverTarjetaF(rc) == true) ////////////////CARTA PARA ESCAPAR DE LA CARCEL////////////////
+                    {                                       ///////////////////////////////////////////////////////////////
+                        players[i].setTarjetas(1);
+                    }
+                }
+            }
+
+            if (chance.cadaJugadorPaga(rc) != 0) //Tarjeta cada jugador paga
+            {
+                for (int i = 0; i < players.Count; i++)
+                {
+                    if (players[i].GetID() == jugadorActual)
+                    {//cantidad que el jugadorActual va a recibir depende de cuantos jugadores hay
+                        if (playernumber == 2)
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + 10);
+                        }
+                        else if (playernumber == 3)
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + 20);
+                        }
+                        else
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + 30);
+                        }
+                    }
+                    else
+                    {// si no son los jugadoresActuales, pierden dinero
+                        players[i].SetMoney(players[i].GetMoney() - 10);
+                    }
+                }
+            }
+            actualizarDinero();
+        }
+
+        public void cartaNasdaq()//metodo para interactuar con cartas nasdaq
+        {
+            Random r = new Random();
+            int rc = r.Next(0, 13);
+            //lee la descripcion de la carta
+            nasdaq.drawNasdaqCard(rc);
+
+            int jugadorActual = Turnoactual;
+            for (int i = 0; i < players.Count; i++)
+            {//encontramos el jugadorActual
+                if (players[i].GetID() == jugadorActual)
+                {
+                    players[i].SetMoney(players[i].GetMoney() + nasdaq.UpdateDinero(rc));
+                    //////////////////////////////////////////////////////////////
+                    if (nasdaq.moverFicha(rc) != 80) ////////////CARTA QUE MUEVE JUGADOR A OTRO CASILLA////////////
+                    {                               //////////////////////////////////////////////////////////////
+                        if (nasdaq.moverFicha(rc) == 0)
+                        {
+                            players[i].SetPosition(nasdaq.moverFicha(rc));
+                            players[i].SetMoney(players[i].GetMoney() + 200); // se le da el dinero por su vuelta
+
+                            if (Turnoactual == 1)
+                            {
+                                imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                    Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                            }
+                            if (Turnoactual == 2)
+                            {
+                                imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                    Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                            }
+                            if (Turnoactual == 3)
+                            {
+                                imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                    Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                            }
+                            if (Turnoactual == 4)
+                            {
+                                imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[0].axis.x), Convert.ToDouble(Spaces[0].axis.y),
+                                                    Convert.ToDouble(Spaces[0].axis.z), Convert.ToDouble(Spaces[0].axis.s));
+                            }
+                        }
+                        else
+                        {
+                            players[i].SetPosition(nasdaq.moverFicha(rc));
+
+                            if (Turnoactual == 1)
+                            {
+                                imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y),
+                                Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
+                            }
+                            if (Turnoactual == 2)
+                            {
+                                imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y),
+                                Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
+                            }
+                            if (Turnoactual == 3)
+                            {
+                                imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y),
+                                Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
+                            }
+                            if (Turnoactual == 4)
+                            {
+                                imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.x), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.y),
+                                Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.z), Convert.ToDouble(Spaces[nasdaq.moverFicha(rc)].axis.s));
+                            }
+                        }
+                    }
+                    ////////////////////////////////////////////////////////
+                    if (nasdaq.gotojail(rc) != 80) ////////////CARTA QUE LLEVA JUGADOR A CARCEL////////////
+                    {                             ////////////////////////////////////////////////////////
+                        players[i].jailed();
+                        players[i].SetPosition(nasdaq.gotojail(rc));
+
+                        if (Turnoactual == 1)
+                        {
+                            imgplayer1.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                        }
+                        if (Turnoactual == 2)
+                        {
+                            imgplayer2.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                        }
+                        if (Turnoactual == 3)
+                        {
+                            imgplayer3.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                        }
+                        if (Turnoactual == 4)
+                        {
+                            imgplayer4.Margin = new Thickness(Convert.ToDouble(Spaces[10].axis.x), Convert.ToDouble(Spaces[10].axis.y),
+                                                Convert.ToDouble(Spaces[10].axis.z), Convert.ToDouble(Spaces[10].axis.s));
+                        }
+                    }
+                    ///////////////////////////////////////
+                    if (nasdaq.moverFicha(rc) == 12) //////////// ????????????? ////////////
+                    {                               ///////////////////////////////////////
+                        if (players[i].GetPosition() <= 17 || players[i].GetPosition() >= 5)
+                        {
+                            players[i].SetPosition(nasdaq.moverFicha(rc));
+                        }
+                    }                                 ///////////////////////////////////////
+                    if (nasdaq.moverFicha(rc) == 33) //////////// ????????????? ////////////
+                    {                               ///////////////////////////////////////
+                        if (players[i].GetPosition() == 3)
+                        {
+                            players[i].SetPosition(nasdaq.moverFicha(rc));
+                        }
+                    }
+                }
+            }
+
+            if (nasdaq.pagarACadaJugador(rc) != 0) // el jugador le paga $50 a cada uno de los jugadores
+            {
+                for (int i = 0; i < players.Count; i++)
+                {
+                    if (players[i].GetID() == jugadorActual)
+                    {
+                        if (playernumber == 2)
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + nasdaq.pagarACadaJugador(rc));
+                        }
+                        if (playernumber == 3)
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + (nasdaq.pagarACadaJugador(rc) * 2));
+                        }
+                        else
+                        {
+                            players[i].SetMoney(players[i].GetMoney() + (nasdaq.pagarACadaJugador(rc) * 3));
+                        }
+                    }
+                    else
+                    {
+                        players[i].SetMoney(players[i].GetMoney() + 50);
+                    }
+                }
+            }
+            actualizarDinero();
         }
 
         private void btnNextTurn_Click(object sender, RoutedEventArgs e)
         {
             Turn.Enqueue(Turnoactual);
             //le pone el turno actual al queque, es decir, ahora le toca al ultimo
-            Iniciarturno();
+            txtMapData.Text = "";
+            iniciarTurnos();
             pagarJugadores();
             mostrarTurno();
-            //txtMapData.Text = "";
-            if(jugadorSinDinero() == true)
+            if (jugadorSinDinero() == true)
             {
                 determinarGanador();
                 terminarJuego();
@@ -1486,7 +856,8 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
 
         private void btnStart_Click(object sender, RoutedEventArgs e)
         {
-            Iniciarturno();
+            iniciarTurnos();
+            //Iniciarturno();
             btnStart.IsEnabled = false;
             btnStart.Content = "Finish!";
             btnNextTurn.Content = "Next Turn!";
@@ -1505,7 +876,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     MessageBoxButton.YesNo) == MessageBoxResult.Yes)//juego pregunta al jugador si desea comprar la empresa
                     {//si el jugador dice que si, se ejecuta el codigo dentro de este if
                         players[i].buy(Spaces[posicion].price, Spaces[posicion]);
-                        Spaces[posicion].canBuy = false;//atributo se cambia a false. lo cual indica que este empresa no puede ser comprado
+                        Spaces[posicion].canBuy = false;//atributo se cambia a false, lo cual indica que este empresa no puede ser comprado
                         Spaces[posicion].setOwner(players[i].GetID());
                         MessageBox.Show("Compraste " + Spaces[posicion].name + ". Felicitaciones!");
                     }
@@ -1513,9 +884,13 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     {
                         MessageBox.Show("No tienes suficiente dinero para comprar la empresa");
                     }
-                    else
+                    else if (Spaces[posicion].canBuy == false)
                     {
                         MessageBox.Show("Este empresa ya tiene un dueño");
+                    }
+                    else
+                    {
+                        MessageBox.Show("No puedes comprar este espacio");
                     }
                 }
             }
@@ -1523,17 +898,18 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             actualizarEmpresas();
         }
 
-
         private void btnTrade_Click_1(object sender, RoutedEventArgs e)//gridTrade se hace visible, see llena un cbo con empresas que el jugador tiene para hacer un trade
         {
             btnTrade.Visibility = Visibility.Hidden;
             cboJugadores.Items.Clear();
             cboPropiedadO.Items.Clear();
-            GridTrade.Visibility = Visibility.Visible;//el grid para hacer un trade se hace visible cuando se apreta el boton
+            GridTrade.Margin = new Thickness(613, 38, 0, 0);//el grid para hacer un trade se hace visible cuando se apreta el boton
             lblAR.Visibility = Visibility.Hidden;
             rbSi.Visibility = Visibility.Hidden;
             rbNo.Visibility = Visibility.Hidden;
-            
+
+            txtOferta.Text = "0";
+
             List<holdings> _empresas = new List<holdings>();
 
             int jugadorActual = Turnoactual;
@@ -1545,21 +921,20 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
                 if (Turnoactual == 0)
                 {
-                    GridTrade.Visibility = Visibility.Hidden;
+                    //GridTrade.Visibility = Visibility.Hidden;
                     btnTrade.Visibility = Visibility.Visible;
                 }
-                
+
                 if (players[i].GetID() == jugadorActual)
                 {
-                    _empresas = players[i].GetHoldings();//se almacenan las empresas del jugador que inicio el trade en la lista _empresas
-                    foreach(holdings h in _empresas)
+                    _empresas = players[i].getHoldings();//se almacenan las empresas del jugador que inicio el trade en la lista _empresas
+                    foreach (holdings h in _empresas)
                     {
                         cboPropiedadO.Items.Add(h.getName() + ", " + h.getColor().ToString());// se llena el cbo con items de _empresas
                     }
                 }
             }
         }
-
 
         private void cboJugadores_SelectionChanged(object sender, SelectionChangedEventArgs e)//se llena el otro cbo con propiedades que el jugador quiere recibir en el trade
         {
@@ -1576,7 +951,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 {
                     if (players[i].GetID() == jugadorTrade)//comparamos el int con el id de los jugadores para almacenar la lista correcta en cboPropiedadesQ
                     {
-                        _Empresas = players[i].GetHoldings();
+                        _Empresas = players[i].getHoldings();
                         foreach (holdings h in _Empresas)
                         {
                             cboPropiedadQ.Items.Add(h.getName() + ", " + h.getColor().ToString());//se llena este combobox con las empresas del jugador
@@ -1585,7 +960,6 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
             }
         }
-
 
         private void rbOferta_Checked(object sender, RoutedEventArgs e)//se hacen visibles los radiobuttons para aceptar o rechazar la oferta
         {
@@ -1596,7 +970,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             }
             else if (int.Parse(txtOferta.Text) < 0)
             {
-                GridTrade.Visibility = Visibility.Hidden;
+                GridTrade.Margin = new Thickness(831, 11, -213, 0);
                 btnTrade.Visibility = Visibility.Visible;
                 rbNo.IsChecked = false;
                 rbSi.IsChecked = false;
@@ -1616,12 +990,11 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             }
         }
 
-
         private void rbSi_Checked(object sender, RoutedEventArgs e)
         {
             if (players[Turnoactual - 1].GetMoney() < double.Parse(txtOferta.Text))
             {
-                GridTrade.Visibility = Visibility.Hidden;
+                GridTrade.Margin = new Thickness(831, 11, -213, 0);
                 btnTrade.Visibility = Visibility.Visible;
                 rbNo.IsChecked = false;
                 rbSi.IsChecked = false;
@@ -1635,10 +1008,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 int jugadorTrade = int.Parse(cboJugadores.SelectedItem.ToString());
                 if (txtOferta.Text == "")
                 {
-                    txtMapData.Text = "¡ No puedes hacer ofertas vacias !";
-                    MessageBox.Show("¡ No puedes hacer ofertas vacias !");
-                    rbSi.IsChecked = false;
-
+                    txtOferta.Text = "0";
                 }
                 else if (cboPropiedadO.SelectedIndex == -1)
                 {
@@ -1672,10 +1042,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     {
                         for (int i = 0; i < players.Count; i++)
                         {
-                            if (players[i].GetID() == jugadorActual)
+                            if (players[i].GetID() == jugadorActual)//se determina el jugadorActual
                             {
                                 ja = players[i];//jugadorActual
-                                _empresas = players[i].GetHoldings();//empresas del jugadorActual se almacenan en _empresas
+                                _empresas = players[i].getHoldings();//empresas del jugadorActual se almacenan en _empresas
                                 for (int j = 0; j < _empresas.Count; j++)
                                 {
                                     if (_empresas[j].getName().Equals(campos[0]))
@@ -1685,10 +1055,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                                 }
                             }
 
-                            if (players[i].GetID() == jugadorTrade)
+                            if (players[i].GetID() == jugadorTrade)//se determina el jugador que recibio la oferta para hacer un trade
                             {
                                 jt = players[i];//jugador que el jugadorActual eligio para hacer un trade
-                                _Empresas = players[i].GetHoldings();
+                                _Empresas = players[i].getHoldings();
                                 for (int j = 0; j < _Empresas.Count; j++)
                                 {
                                     if (_Empresas[j].getName().Equals(celdas[0]))
@@ -1701,7 +1071,7 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                         ja.trade(JA, jt, JT, oferta);// trade se hace con este metodo
                         actualizarDinero();//los datos de los jugadores involucrados en el trade se actualizan en el tablero
                         actualizarEmpresas();
-                        GridTrade.Visibility = Visibility.Hidden;
+                        GridTrade.Margin = new Thickness(831, 11, -213, 0);
                         btnTrade.Visibility = Visibility.Visible;
                         rbSi.IsChecked = false;
                     }
@@ -1712,7 +1082,6 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 }
             }
         }
-
 
         private void rbNo_Checked(object sender, RoutedEventArgs e)
         {
@@ -1725,14 +1094,15 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
             }
             else
             {
-                GridTrade.Visibility = Visibility.Hidden;
+                GridTrade.Margin = new Thickness(831, 11, -213, 0);
                 btnTrade.Visibility = Visibility.Visible;
             }
         }
 
         private void btnPrestamos_Click(object sender, RoutedEventArgs e)
         {
-            gridPrestamo.Visibility = Visibility.Visible;
+            gridPrestamo.Margin = new Thickness(615, 243, 0, -0.4);
+            //gridPrestamo.Visibility = Visibility.Visible;
             cboPrestamo.Items.Clear();
             rbHacerPrestamo.IsChecked = false;
             rbCancelarPrestamo.IsChecked = false;
@@ -1740,10 +1110,10 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
 
             for (int i = 0; i < players.Count; i++)
             {
-                if(players[i].GetID() == Turnoactual)//juego encuentra el jugadorActual
+                if (players[i].GetID() == Turnoactual)//juego encuentra el jugadorActual
                 {
-                    _empresas = players[i].GetHoldings();// empreas del jugador se almacenan en _empresas
-                    foreach(holdings h in _empresas)
+                    _empresas = players[i].getHoldings();// empreas del jugador se almacenan en _empresas
+                    foreach (holdings h in _empresas)
                     {
                         cboPrestamo.Items.Add(h.getName() + ", " + h.getColor().ToString());//empresas de jugador se agregan a combobox
                     }
@@ -1755,26 +1125,27 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
         {
             if (cboPrestamo.SelectedItem == null)//en caso de que un jugador intenta pedir un prestamo sin elegir una empresa
             {
-                gridPrestamo.Visibility = Visibility.Hidden;
+                gridPrestamo.Margin = new Thickness(1038, 12, -418, 0);
+                //gridPrestamo.Visibility = Visibility.Hidden;
                 txtMapData.Text = "¡No puedes hacer un préstamo de nada!";
             }
             else
             {
                 string empresa = cboPrestamo.SelectedItem.ToString();//empresa se almacena en un string, para tener el nombre disponible para hacer una comparacion
                 string[] campos = empresa.Split(',');
-  
+
                 for (int i = 0; i < players.Count; i++)//para identificar el jugadorActual
                 {
                     if (players[i].GetID() == Turnoactual)
                     {
-                        foreach (holdings h in players[i].GetHoldings())//recorre las empresas del jugadorActual
+                        foreach (holdings h in players[i].getHoldings())//recorre las empresas del jugadorActual
                         {
                             if (h.getName().Equals(campos[0]) && h.getPrestamo() == false)//encontramos la empresa en el cbo dentro de la lista del jugadorActual
                             {
                                 players[i].pedirPrestamo(h);
                                 MessageBox.Show(h.getName() + ", no puedes cobrar a jugadores que caen en ese espacio hasta que canceles el prestamo");
                             }
-                            else
+                            else if (h.getName().Equals(campos[0]) && h.getPrestamo() == true)
                             {
                                 MessageBox.Show("Ya pediste un prestamo con acciones de este empresa");
                             }
@@ -1782,7 +1153,8 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     }
                 }
                 actualizarDinero();
-                gridPrestamo.Visibility = Visibility.Hidden;              
+                gridPrestamo.Margin = new Thickness(1038, 12, -418, 0);
+                //gridPrestamo.Visibility = Visibility.Hidden;              
             }
         }
 
@@ -1790,7 +1162,8 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
         {
             if (cboPrestamo.SelectedItem == null)
             {
-                gridPrestamo.Visibility = Visibility.Hidden;
+                gridPrestamo.Margin = new Thickness(1038, 12, -418, 0);
+                //gridPrestamo.Visibility = Visibility.Hidden;
             }
             else
             {
@@ -1801,14 +1174,14 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                 {
                     if (players[i].GetID() == Turnoactual)
                     {
-                        foreach (holdings h in players[i].GetHoldings())//recorre las empresas del jugadorActual
+                        foreach (holdings h in players[i].getHoldings())//recorre las empresas del jugadorActual
                         {
                             if (h.getName().Equals(campos[0]) && h.getPrestamo() == true)//encontramos la empresa en el cbo dentro de la lista del jugadorActual
                             {
                                 players[i].cancelarPrestamo(h);
                                 MessageBox.Show(h.getName() + ", Este espacio te va a generar ingresos nuevamente");
                             }
-                            else//en caso de que un jugador intenta cancelar su prestamo con activos de otra empresa
+                            else if (h.getName().Equals(campos[0]) && h.getPrestamo() == false)//en caso de que un jugador intenta cancelar su prestamo con activos de otra empresa
                             {
                                 MessageBox.Show("No se puede cancelar");
                             }
@@ -1816,13 +1189,14 @@ namespace Monopoly_Nasdaq_Alpha_v0._01
                     }
                 }
                 actualizarDinero();
-                gridPrestamo.Visibility = Visibility.Hidden;
+                gridPrestamo.Margin = new Thickness(1038, 12, -418, 0);
+                //gridPrestamo.Visibility = Visibility.Hidden;
             }
         }
 
         private void btnTradeCancelar_Click(object sender, RoutedEventArgs e)
         {
-            GridTrade.Visibility = Visibility.Hidden;
+            GridTrade.Margin = new Thickness(831, 11, -213, 0);
             btnTrade.Visibility = Visibility.Visible;
             txtOferta.Text = "";
             rbOferta.IsChecked = false;

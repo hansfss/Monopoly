@@ -353,3 +353,30 @@ F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Mono
 F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.Cache
 F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
 F:\Progra 2\Monopoly Bolsa de comercio\Monopoly Bolsa de comercio\obj\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.AssemblyReference.cache
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Creditos.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\MainWindow.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\NewGame1.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\PlayGame.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\PressStart.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\App.g.cs
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.cache
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01_MarkupCompile.lref
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Creditos.baml
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\MainWindow.baml
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\NewGame1.baml
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\PlayGame.baml
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\PressStart.baml
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.g.resources
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly_Nasdaq_Alpha_v0._01.Properties.Resources.resources
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.GenerateResource.cache
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.csproj.CoreCompileInputs.cache
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.config
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\bin\Debug\Monopoly Nasdaq Alpha v0.01.application
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\bin\Debug\Monopoly Nasdaq Alpha v0.01.exe
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\bin\Debug\Monopoly Nasdaq Alpha v0.01.pdb
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.exe.manifest
+C:\Users\folke\Stuff\Programming\C#\Monopoly\Monopoly\obj\Debug\Monopoly Nasdaq Alpha v0.01.application

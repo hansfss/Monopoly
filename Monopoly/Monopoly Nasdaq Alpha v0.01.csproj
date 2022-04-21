@@ -61,7 +61,7 @@
     <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <PropertyGroup>
-    <SignManifests>true</SignManifests>
+    <SignManifests>false</SignManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -166,9 +166,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Board\Logo.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Board\Board.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Brands\HM.png" />
@@ -307,6 +304,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Board\dice.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Board\MBoard.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

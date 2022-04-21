@@ -6,24 +6,49 @@
         xmlns:local="clr-namespace:Monopoly_Nasdaq_Alpha_v0._01"
         mc:Ignorable="d" Background="SlateGray" WindowStartupLocation="CenterScreen" ResizeMode="NoResize"
         Title="PlayGame" Height="450" Width="800" WindowStyle="None">
-    <Grid>
-        <Grid.Background>
-            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                <GradientStop Color="Black" Offset="0.391"/>
-                <GradientStop Color="#FF343434" Offset="1"/>
-            </LinearGradientBrush>
-        </Grid.Background>
+    <Grid Background="#FF4065CB">
         <Grid.ColumnDefinitions>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Image Margin="138,38,190,0" Source="Board/Board.jpg" Stretch="Fill"/>
-        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="33,34,0,0" VerticalAlignment="Top" Width="75" PreviewMouseDown="btnBack_PreviewMouseDown" Height="20"/>
-        <TextBlock x:Name="txtMapData" HorizontalAlignment="Left" Foreground="Azure" Margin="615,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="180" Background="#FF353535"/>
-        <Button x:Name="btnNextTurn" Content="" HorizontalAlignment="Left" Margin="715,39,0,0" VerticalAlignment="Top" Width="75" Click="btnNextTurn_Click" IsEnabled="False"/>
-        <Button x:Name="btnStart" Content="Start!" HorizontalAlignment="Left" Margin="615,39,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click"/>
-        <TextBlock x:Name="txtDice1" HorizontalAlignment="Left" Foreground="Azure" Margin="680,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="22" Background="#FF353535" FontSize="18" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center"/>
-        <Button x:Name="btnComprar" Content="Comprar" HorizontalAlignment="Left" Margin="715,63,0,0" VerticalAlignment="Top" Width="75" Click="btnComprar_Click" Height="20"/>
-        <TextBlock x:Name="txtDice2" HorizontalAlignment="Left" Foreground="Azure" Margin="715,161,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="24" Width="22" Background="#FF353535" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center" FontSize="18"/>
+        <Image Margin="138,38,190,0" Source="Board/MBoard.jpg" Stretch="Fill"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="628,64,0,0" VerticalAlignment="Top" Width="75" PreviewMouseDown="btnBack_PreviewMouseDown" Height="20" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="txtMapData" HorizontalAlignment="Left" Foreground="Azure" Margin="615,190,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="46" Width="180" Background="#FFFFB413"/>
+        <Button x:Name="btnNextTurn" Content="" HorizontalAlignment="Left" Margin="708,39,0,0" VerticalAlignment="Top" Width="75" Click="btnNextTurn_Click" IsEnabled="False" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="btnStart" Content="Start!" HorizontalAlignment="Left" Margin="628,39,0,0" VerticalAlignment="Top" Width="75" Click="btnStart_Click" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="txtDice1" HorizontalAlignment="Left" Foreground="Azure" Margin="642,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="48" Background="#FFFFB413" FontSize="30" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center"/>
+        <Button x:Name="btnComprar" Content="Comprar" HorizontalAlignment="Left" Margin="652,299,0,0" VerticalAlignment="Top" Width="100" Click="btnComprar_Click" Height="30" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="btnPrestamos" Content="Prestamos" HorizontalAlignment="Left" Margin="652,379,0,0" VerticalAlignment="Top" Height="30" Width="100" Click="btnPrestamos_Click" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <TextBlock x:Name="txtDice2" HorizontalAlignment="Left" Foreground="Azure" Margin="715,119,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="48" Width="48" Background="#FFFFB413" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center" FontSize="30"/>
         <Image Margin="552,298,202,130" Source="Brands/HM.png" Stretch="Fill"/>
         <Image Margin="560,325,208,96" Source="Board/Taxes.png" Stretch="Fill"/>
         <Label x:Name="lbltaxsoymuyinutil" Content="300$" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="552,303,0,0" RenderTransformOrigin="0.5,0.5" Height="70" Width="38">
@@ -107,34 +132,137 @@
         <Image x:Name="imgplayer3" Margin="-150,261,902,147" Source="Characters/Player3.png" Stretch="Fill"/>
         <Image x:Name="imgplayer4" Margin="-203,261,955,147" Source="Characters/Player2.png" Stretch="Fill" RenderTransformOrigin="0.939,3.5"/>
         <Image x:Name="imgplayer1" Margin="-256,260,1008,148" Source="Characters/Player1.png" Stretch="Fill" RenderTransformOrigin="0.485,0.546"/>
-        <Grid HorizontalAlignment="Left" Height="82" Margin="5,68,0,0" VerticalAlignment="Top" Width="133" ShowGridLines="True" Background="#FF353535">
-            <TextBlock x:Name="txtDataPlayer1" HorizontalAlignment="Left" Margin="6,30,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="120" Background="#FFEAEAEA"/>
-            <Label x:Name="lblPlayer1" Content="PLAYER 1" HorizontalAlignment="Left" Margin="34,-1,0,0" VerticalAlignment="Top" Foreground="White"/>
-            <ComboBox x:Name="cboPropiedades1" HorizontalAlignment="Left" Margin="6,55,0,0" VerticalAlignment="Top" Width="120"/>
+        <Grid HorizontalAlignment="Left" Height="99" Margin="2,30,0,0" VerticalAlignment="Top" Width="133" ShowGridLines="True" Background="#FF4065CB">
+            <ComboBox x:Name="cboPropiedades1" HorizontalAlignment="Left" Margin="6,73,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Orange"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" />
+                </ComboBox.Resources>
+            </ComboBox>
+            <Border BorderBrush="Black" HorizontalAlignment="Left" Height="30" Margin="6,10,0,0" VerticalAlignment="Top" Width="120" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Background="#FFFFB413">
+                <Label x:Name="lblPlayer1" Content="PLAYER 1" HorizontalAlignment="Left" Margin="31,-1,0,0" VerticalAlignment="Top" Foreground="Black"/>
+            </Border>
+            <Label x:Name="lblDataPlayer1" Content="" HorizontalAlignment="Left" Margin="6,45,0,0" VerticalAlignment="Top" BorderBrush="#FFF11212" Background="#FFFFB413" Width="120" Height="23">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border x:Name="_brdMain" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="5,5,5,5"
+                                        >
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="82" Margin="5,156,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
-            <TextBlock x:Name="txtDataPlayer2" HorizontalAlignment="Left" Margin="10,25,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="113" Background="#FFEAEAEA"/>
-            <Label x:Name="lblPlayer2" Content="PLAYER 2" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" Foreground="White"/>
-            <ComboBox x:Name="cboPropiedades2" HorizontalAlignment="Left" Margin="10,50,0,0" VerticalAlignment="Top" Width="113"/>
+        <Grid HorizontalAlignment="Left" Height="104" Margin="2,137,0,0" VerticalAlignment="Top" Width="133" Background="#FF4065CB" ShowGridLines="True">
+            <Border BorderBrush="Black" HorizontalAlignment="Left" Height="30" Margin="6,10,0,0" VerticalAlignment="Top" Width="120" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Background="#FFFFB413">
+                <Label x:Name="lblPlayer2" Content="PLAYER 2" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Top" Foreground="Black"/>
+            </Border>
+            <Label x:Name="lblDataPlayer2" Content="" HorizontalAlignment="Left" Margin="6,45,0,0" VerticalAlignment="Top" BorderBrush="#FFF11212" Background="#FFFFB413" Width="120" Height="23">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border x:Name="_brdMain" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="5,5,5,5"
+                                        >
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <ComboBox x:Name="cboPropiedades2" HorizontalAlignment="Left" Margin="6,73,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Orange"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" />
+                </ComboBox.Resources>
+            </ComboBox>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="82" Margin="5,243,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
-            <TextBlock x:Name="txtDataPlayer3" HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="110" Background="#FFEAEAEA"/>
-            <Label x:Name="lblPlayer3" Content="PLAYER 3" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" Foreground="White"/>
-            <ComboBox x:Name="cboPropiedades3" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="110"/>
+        <Grid HorizontalAlignment="Left" Height="104" Margin="2,246,0,0" VerticalAlignment="Top" Width="133" Background="#FF4065CB" ShowGridLines="True">
+            <Label x:Name="lblDataPlayer3" Content="" HorizontalAlignment="Left" Margin="6,45,0,0" VerticalAlignment="Top" BorderBrush="#FFF11212" Background="#FFFFB413" Width="120" Height="23">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border x:Name="_brdMain" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="5,5,5,5"
+                                        >
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Border BorderBrush="Black" HorizontalAlignment="Left" Height="30" Margin="6,10,0,0" VerticalAlignment="Top" Width="120" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Background="#FFFFB413">
+                <Label x:Name="lblPlayer3" Content="PLAYER 3" HorizontalAlignment="Left" Margin="31,0,0,0" VerticalAlignment="Top" Foreground="Black"/>
+            </Border>
+            <ComboBox x:Name="cboPropiedades3" HorizontalAlignment="Left" Margin="6,73,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Orange"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" />
+                </ComboBox.Resources>
+            </ComboBox>
         </Grid>
-        <Grid HorizontalAlignment="Left" Height="82" Margin="5,330,0,0" VerticalAlignment="Top" Width="133" Background="#FF353535" ShowGridLines="True">
-            <TextBlock x:Name="txtDataPlayer4" HorizontalAlignment="Left" Margin="10,26,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="20" Width="110" Background="#FFEAEAEA"/>
-            <Label x:Name="lblPlayer4" Content="PLAYER 4" HorizontalAlignment="Left" Margin="34,0,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.475,0.154" Foreground="White"/>
-            <ComboBox x:Name="cboPropiedades4" HorizontalAlignment="Left" Margin="10,51,0,0" VerticalAlignment="Top" Width="110"/>
+        <Grid HorizontalAlignment="Left" Height="98" Margin="1,344,0,0" VerticalAlignment="Top" Width="133" Background="#FF4065CB" ShowGridLines="True">
+            <Label x:Name="lblDataPlayer4" Content="" HorizontalAlignment="Left" Margin="6,45,0,0" VerticalAlignment="Top" BorderBrush="#FFF11212" Background="#FFFFB413" Width="120" Height="23">
+                <Label.Style>
+                    <Style TargetType="Label">
+                        <Setter Property="Template">
+                            <Setter.Value>
+                                <ControlTemplate TargetType="Label">
+                                    <Border x:Name="_brdMain" 
+                                        BorderThickness="{TemplateBinding BorderThickness}"
+                                        BorderBrush="{TemplateBinding BorderBrush}" 
+                                        Background="{TemplateBinding Background}"
+                                        CornerRadius="5,5,5,5"
+                                        >
+                                        <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    </Border>
+                                </ControlTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </Style>
+                </Label.Style>
+            </Label>
+            <Border BorderBrush="Black" HorizontalAlignment="Left" Height="30" Margin="6,10,0,0" VerticalAlignment="Top" Width="120" BorderThickness="1,1,1,1" CornerRadius="10,10,10,10" Background="#FFFFB413">
+                <Label x:Name="lblPlayer4" Content="PLAYER 4" HorizontalAlignment="Left" Margin="31,-1,0,0" VerticalAlignment="Top" Foreground="Black"/>
+            </Border>
+            <ComboBox x:Name="cboPropiedades4" HorizontalAlignment="Left" Margin="6,73,0,0" VerticalAlignment="Top" Width="120">
+                <ComboBox.Resources>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.WindowBrushKey}" Color="Orange"/>
+                    <SolidColorBrush x:Key="{x:Static SystemColors.HighlightBrushKey}" Color="Red" />
+                </ComboBox.Resources>
+            </ComboBox>
         </Grid>
-        <Label x:Name="label" Content="TURNO" Foreground ="White" HorizontalAlignment="Left" Margin="652,241,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtTurno" HorizontalAlignment="Left" Foreground="Azure" Height="23" Margin="702,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Background="#FF353535" HorizontalContentAlignment="Center"/>
-        <TextBlock x:Name="txtDice3" HorizontalAlignment="Left" Foreground="Azure" Margin="680,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="51" Width="57" Background="#FF353535" FontWeight="Bold" FontStyle="Oblique" TextAlignment="Center" FontSize="36"/>
-        <Image x:Name="Facep4" Margin="1018,196,-418,54" Source="Characters/player2_b.png" Stretch="Fill"/>
-        <Image x:Name="Facep3" Margin="1018,198,-418,54" Source="Characters/player3_b.png" Stretch="Fill"/>
-        <Image x:Name="Facep2" Margin="1018,196,-418,54" Source="Characters/player4_b.png" Stretch="Fill"/>
-        <Image x:Name="Facep1" Margin="1018,196,-418,54" Source="Characters/player1_b.png" Stretch="Fill"/>
-        <Grid x:Name="GridTrade" HorizontalAlignment="Left" Height="402" Margin="613,38,0,0" VerticalAlignment="Top" Width="182" Background="#FF353535">
+        <Label x:Name="label" Content="TURNO" Foreground ="White" HorizontalAlignment="Left" Margin="628,242,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtTurno" HorizontalAlignment="Left" Foreground="Azure" Height="23" Margin="683,243,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="35" Background="#FF353535" HorizontalContentAlignment="Center"/>
+        <Image x:Name="Facep4" Margin="1018,264,-258,147.6" Source="Characters/player2_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep3" Margin="1018,263,-258,148.6" Source="Characters/player3_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep2" Margin="1018,265,-258,146.6" Source="Characters/player4_b.png" Stretch="Fill"/>
+        <Image x:Name="Facep1" Margin="1018,263,-258,146.6" Source="Characters/player1_b.png" Stretch="Fill"/>
+        <Grid x:Name="GridTrade" HorizontalAlignment="Left" Height="402" Margin="810,40,-192,0" VerticalAlignment="Top" Width="182" Background="#FF4065CB">
             <Label x:Name="lblJugador" Content="Elige un jugador" HorizontalAlignment="Left" Foreground="Azure" Margin="22,0,0,0" VerticalAlignment="Top" Width="132" HorizontalContentAlignment="Center"/>
             <ComboBox x:Name="cboJugadores" HorizontalAlignment="Left" Margin="29,26,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cboJugadores_SelectionChanged"/>
             <Label x:Name="label_Copy" Content="Propiedad a ofrecer" HorizontalAlignment="Left" Foreground="Azure" Margin="12,42,0,0" VerticalAlignment="Top" Width="158" HorizontalContentAlignment="Center"/>
@@ -148,17 +276,28 @@
             <Label x:Name="lblAR" Content="Label" HorizontalAlignment="Left" Foreground="Azure" Margin="10,304,0,0" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center"/>
             <Label x:Name="label2" Content="Hacer oferta" HorizontalAlignment="Left" Foreground="Azure" Margin="40,256,0,0" VerticalAlignment="Top"/>
             <RadioButton x:Name="rbOferta" Content="" HorizontalAlignment="Left" Margin="115,262,0,0" VerticalAlignment="Top" Checked="rbOferta_Checked"/>
-            <Button x:Name="btnTradeCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" Width="75" Click="btnTradeCancelar_Click"/>
+            <Button x:Name="btnTradeCancelar" Content="Cancelar" HorizontalAlignment="Left" Margin="49,197,0,0" VerticalAlignment="Top" Width="75" Click="btnTradeCancelar_Click" Background="#FFFFB413">
+                <Button.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="5"/>
+                    </Style>
+                </Button.Resources>
+            </Button>
         </Grid>
-        <Button x:Name="btnTrade" Content="Trade" HorizontalAlignment="Left" Margin="615,65,0,0" VerticalAlignment="Top" Width="75" Click="btnTrade_Click_1"/>
-        <Grid x:Name="gridPrestamo" HorizontalAlignment="Left" Height="207" Margin="615,243,0,-0.4" VerticalAlignment="Top" Width="180" Background="#FF383838">
+        <Button x:Name="btnTrade" Content="Trade" HorizontalAlignment="Left" Margin="652,339,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="btnTrade_Click_1" Background="#FFFFB413">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="5"/>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Grid x:Name="gridPrestamo" HorizontalAlignment="Left" Height="207" Margin="1018,41,-398,0" VerticalAlignment="Top" Width="180" Background="#FF4065CB">
             <Label x:Name="label_Copy3" Content="Elige la marca" HorizontalAlignment="Left" Foreground="Azure" Margin="10,10,0,0" VerticalAlignment="Top" Width="160" HorizontalContentAlignment="Center"/>
             <ComboBox x:Name="cboPrestamo" HorizontalAlignment="Left" Margin="28,36,0,0" VerticalAlignment="Top" Width="120"/>
             <RadioButton x:Name="rbHacerPrestamo" Content="Pedir prestamo" Foreground="Azure" HorizontalAlignment="Left" Margin="32,95,0,0" VerticalAlignment="Top" Checked="rbHacerPrestamo_Checked"/>
             <RadioButton x:Name="rbCancelarPrestamo" Content="Cancelar prestamo" Foreground="Azure" HorizontalAlignment="Left" Margin="32,115,0,0" VerticalAlignment="Top" Checked="rbCancelarPrestamo_Checked"/>
             <Grid HorizontalAlignment="Left" Height="100" Margin="166,70,-86,0" VerticalAlignment="Top" Width="100"/>
         </Grid>
-        <Button x:Name="btnPrestamos" Content="Prestamos" HorizontalAlignment="Left" Margin="33,422,0,0" VerticalAlignment="Top" Width="75" Click="btnPrestamos_Click"/>
         <Label x:Name="lbltaxsoymuyinutil_Copy" Content=" The Chair&#xD;&#xA;" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="White" Margin="150,48,0,0" RenderTransformOrigin="0.5,0.5" Height="52" Width="59" FontSize="10">
             <Label.RenderTransform>
                 <TransformGroup>
